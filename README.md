@@ -46,6 +46,32 @@
          ├─ encoder_bridge.py
          ├─ robot_description_publisher.py
          └─ scan_stamp_fix.py
+
+elf_slam_ws/
+├── dual_detect_service.py              # 视觉识别 + 报警 + 急停联动
+├── 技术文档.md                          # 本文档
+└── src/
+    ├── elf_slam/                       # 主包：SLAM + Nav2 + 底盘
+    │   ├── launch/
+    │   │   ├── online_async_launch.py        # SLAM 全栈
+    │   │   ├── online_async_nav_launch.py    # SLAM + Nav2 + 底盘 + RViz
+    │   │   └── save_map_launch.py            # 保存地图
+    │   ├── config/
+    │   │   ├── mapper_params_online_async.yaml   # slam_toolbox
+    │   │   ├── nav2_params_online_slam.yaml      # Nav2 全套参数
+    │   │   ├── diff_drive_params.yaml            # 底盘参数
+    │   │   └── nav2_online_slam.rviz             # RViz 布局
+    │   ├── scripts/start_rviz.sh                 # RViz 开机自启动
+    │   ├── elf_slam/
+    │   │   ├── encoder_bridge.py                 # 里程计
+    │   │   ├── scan_stamp_fix.py                 # 雷达预处理
+    │   │   └── diff_drive_controller.py          # 底盘驱动 + 急停
+    │   ├── src/encoder_raw.c                      # GPIO 编码器
+    │   └── urdf/elf_robot.urdf
+    ├── imu_ros2_device/                # IMU 驱动
+    ├── lslidar_driver/                 # 雷达驱动
+    └── lslidar_msgs/                   # 雷达消息
+
 ```
 
 ---
@@ -459,34 +485,6 @@ ROS2/RViz 标注桥接模块。
 4. 命中报警条件后保存图片并上传；
 5. Android 弹窗确认后恢复识别。
 
----
-
-## 九、项目亮点
-
-- 双路视觉融合识别：可见光 + 热成像联动；
-- 报警后自动联动摄像头语音提示；
-- Android 端统一控制小车、云台、灯光、对讲；
-- ROS2 中实时生成报警定位标注；
-- 支持热成像网页预览与历史报警管理；
-- 识别后自动停止导航，增强安全性。
-
----
-
-## 十、附：旧版详细技术文档
-
-下面内容来自你原来的 `技术文档.md`，我已经合并进来，保留其更偏底层和更完整的说明，便于答辩和验收时直接使用。
-
-# ELF 救援机器人系统技术文档
-
-> 基于 RK3588 + ROS2 Humble 的「边导航边建图边避障」自主移动机器人，集成双路（可见光 + 热成像）人员识别、报警联动停车与地图定位上报。
-
----
-
-## 1. 系统概述
-
-本系统面向搜救场景，机器人在未知环境中**边走边建图**，同时根据实时地图进行**自主导航与动态避障**；视觉子系统并行识别被困/被埋人员，触发报警后在地图上标注位置，并**立即停止导航与底盘运动**。
-
-整机分为两个相对独立的子系统，通过 ROS2 话题/TF 协作：
 
 | 子系统 | 入口 | 作用 |
 |--------|------|------|
@@ -890,50 +888,3 @@ ros2 launch elf_slam save_map_launch.py map_path:=/home/elf/elf_map
 
 - 急停由 `/emergency_stop` 直达硬件，响应约一个内核轮询周期（~100 ms）。
 - 若仍觉得慢：检查 `enable_motor:=true`、内核模块是否正常加载。
-
----
-
-## 9. 目录结构
-
-```text
-elf_slam_ws/
-├── dual_detect_service.py              # 视觉识别 + 报警 + 急停联动
-├── 技术文档.md                          # 本文档
-└── src/
-    ├── elf_slam/                       # 主包：SLAM + Nav2 + 底盘
-    │   ├── launch/
-    │   │   ├── online_async_launch.py        # SLAM 全栈
-    │   │   ├── online_async_nav_launch.py    # SLAM + Nav2 + 底盘 + RViz
-    │   │   └── save_map_launch.py            # 保存地图
-    │   ├── config/
-    │   │   ├── mapper_params_online_async.yaml   # slam_toolbox
-    │   │   ├── nav2_params_online_slam.yaml      # Nav2 全套参数
-    │   │   ├── diff_drive_params.yaml            # 底盘参数
-    │   │   └── nav2_online_slam.rviz             # RViz 布局
-    │   ├── scripts/start_rviz.sh                 # RViz 开机自启动
-    │   ├── elf_slam/
-    │   │   ├── encoder_bridge.py                 # 里程计
-    │   │   ├── scan_stamp_fix.py                 # 雷达预处理
-    │   │   └── diff_drive_controller.py          # 底盘驱动 + 急停
-    │   ├── src/encoder_raw.c                      # GPIO 编码器
-    │   └── urdf/elf_robot.urdf
-    ├── imu_ros2_device/                # IMU 驱动
-    ├── lslidar_driver/                 # 雷达驱动
-    └── lslidar_msgs/                   # 雷达消息
-```
-
----
-
-## 10. 技术要点总结
-
-| 能力 | 用什么技术 | 怎么实现 |
-|------|-----------|----------|
-| 边走边建图 | slam_toolbox async | `/scan_fixed` + `/odom` → `/map` + `map→odom` TF |
-| 自主导航 | Nav2 + DWB | global/local costmap → `/plan` + `/local_plan` → `/cmd_vel` |
-| 动态避障 | Nav2 costmap_2d | 雷达实时更新 obstacle_layer，inflation_layer 膨胀 |
-| 里程计 | 编码器 + IMU 融合 | C 程序读 GPIO → Python 积分 → `/odom` TF |
-| 底盘控制 | 内核模块 + Python 桥接 | `/cmd_vel` → 离散 w/s/a/d/p + PWM 占空比 |
-| 视觉识别 | RKNN YOLOv8 双路 | NPU 双核并行，状态机融合可见光/热成像 |
-| 识别定位 | ROS2 TF + Marker | 查 `map→base_footprint`，发布地图坐标点 |
-| 报警停车 | 急停话题 + Nav2 取消 | `/emergency_stop` 直达硬件 + 取消目标 + 零速 |
-| 可视化 | RViz2 预配置 | 地图、路径、代价地图、识别点一键加载 |
