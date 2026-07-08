@@ -1,0 +1,109 @@
+[0.000000] (-) TimerEvent: {}
+[0.000721] (-) JobUnselected: {'identifier': 'YbImuLib'}
+[0.001447] (-) JobUnselected: {'identifier': 'imu_ros2_device'}
+[0.001612] (-) JobUnselected: {'identifier': 'lslidar_msgs'}
+[0.001830] (elf_slam) JobQueued: {'identifier': 'elf_slam', 'dependencies': OrderedDict()}
+[0.001963] (lslidar_driver) JobQueued: {'identifier': 'lslidar_driver', 'dependencies': OrderedDict([('lslidar_msgs', '/home/elf/elf_slam_ws/install/lslidar_msgs')])}
+[0.002087] (elf_slam) JobStarted: {'identifier': 'elf_slam'}
+[0.014095] (lslidar_driver) JobStarted: {'identifier': 'lslidar_driver'}
+[0.099529] (-) TimerEvent: {}
+[0.200520] (-) TimerEvent: {}
+[0.301487] (-) TimerEvent: {}
+[0.402532] (-) TimerEvent: {}
+[0.443107] (lslidar_driver) JobProgress: {'identifier': 'lslidar_driver', 'progress': 'cmake'}
+[0.446375] (lslidar_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/elf/elf_slam_ws/src/lslidar_driver', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/elf/elf_slam_ws/install/lslidar_driver'], 'cwd': '/home/elf/elf_slam_ws/build/lslidar_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en'), ('USER', 'elf'), ('SSH_CLIENT', '192.168.72.118 50161 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/elf'), ('MUTTER_DEBUG_ENABLE_ATOMIC_KMS', '0'), ('OLDPWD', '/home/elf/elf_slam_ws/src/elf_slam/config'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'en_US.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'elf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-color'), ('XDG_SESSION_ID', 'c8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'letter'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('CLUTTER_PAINT', 'disable-dynamic-max-render-time'), ('PROMPT_COMMAND', 'history -a;pwd > /tmp/b0b2597ec3;'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('MUTTER_DEBUG_FORCE_KMS_MODE', 'simple'), ('PWD', '/home/elf/elf_slam_ws/build/lslidar_driver'), ('SSH_CONNECTION', '192.168.72.118 50161 192.168.72.163 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('TZ', 'Asia/Shanghai'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs:/opt/ros/humble')]), 'shell': False}
+[0.502741] (-) TimerEvent: {}
+[0.545545] (lslidar_driver) StdoutLine: {'line': b'-- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread \n'}
+[0.547991] (lslidar_driver) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.602954] (-) TimerEvent: {}
+[0.704055] (-) TimerEvent: {}
+[0.805133] (-) TimerEvent: {}
+[0.810549] (lslidar_driver) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.905368] (-) TimerEvent: {}
+[0.932624] (lslidar_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.937975] (lslidar_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.950135] (lslidar_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.967902] (lslidar_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.989507] (lslidar_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.005729] (-) TimerEvent: {}
+[1.051493] (lslidar_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.054533] (lslidar_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.106059] (-) TimerEvent: {}
+[1.145217] (elf_slam) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/elf/elf_slam_ws/build/elf_slam/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/home/elf/elf_slam_ws/build/elf_slam', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en', 'USER': 'elf', 'SSH_CLIENT': '192.168.72.118 50161 22', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/elf', 'MUTTER_DEBUG_ENABLE_ATOMIC_KMS': '0', 'OLDPWD': '/home/elf/elf_slam_ws/src/elf_slam/config', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'en_US.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'humble', 'LOGNAME': 'elf', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-color', 'XDG_SESSION_ID': 'c8', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'letter', 'LC_ADDRESS': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'CLUTTER_PAINT': 'disable-dynamic-max-render-time', 'PROMPT_COMMAND': 'history -a;pwd > /tmp/b0b2597ec3;', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'MUTTER_DEBUG_FORCE_KMS_MODE': 'simple', 'PWD': '/home/elf/elf_slam_ws/build/elf_slam', 'SSH_CONNECTION': '192.168.72.118 50161 192.168.72.163 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/elf/elf_slam_ws/build/elf_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'TZ': 'Asia/Shanghai', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1'}, 'shell': False}
+[1.187988] (lslidar_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.206196] (-) TimerEvent: {}
+[1.303346] (lslidar_driver) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[1.306292] (-) TimerEvent: {}
+[1.319397] (lslidar_driver) StdoutLine: {'line': b'-- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization \n'}
+[1.344483] (lslidar_driver) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/aarch64-linux-gnu/libflann_cpp.so)\n'}
+[1.406611] (-) TimerEvent: {}
+[1.466163] (elf_slam) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[1.467246] (elf_slam) StderrLine: {'line': b'  File "/home/elf/elf_slam_ws/build/elf_slam/setup.py", line 44, in <module>\n'}
+[1.467828] (elf_slam) StderrLine: {'line': b'    build_encoder_raw()\n'}
+[1.468331] (elf_slam) StderrLine: {'line': b'  File "/home/elf/elf_slam_ws/build/elf_slam/setup.py", line 19, in build_encoder_raw\n'}
+[1.468774] (elf_slam) StderrLine: {'line': b"    raise RuntimeError(f'encoder source not found: {encoder_source}')\n"}
+[1.469167] (elf_slam) StderrLine: {'line': b'RuntimeError: encoder source not found: /home/elf/elf_slam_ws/build/elf_slam/src/encoder_raw.c\n'}
+[1.506908] (-) TimerEvent: {}
+[1.539671] (elf_slam) CommandEnded: {'returncode': 1}
+[1.541554] (elf_slam) JobEnded: {'identifier': 'elf_slam', 'rc': 1}
+[1.607191] (-) TimerEvent: {}
+[1.708525] (-) TimerEvent: {}
+[1.809717] (-) TimerEvent: {}
+[1.910816] (-) TimerEvent: {}
+[2.011978] (-) TimerEvent: {}
+[2.045994] (lslidar_driver) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.055910] (lslidar_driver) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[2.057030] (lslidar_driver) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to pcap will be disabled\x1b[0m\n'}
+[2.112278] (-) TimerEvent: {}
+[2.213594] (-) TimerEvent: {}
+[2.288562] (lslidar_driver) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[2.300863] (lslidar_driver) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.311476] (lslidar_driver) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[2.313649] (-) TimerEvent: {}
+[2.414584] (-) TimerEvent: {}
+[2.515751] (-) TimerEvent: {}
+[2.533729] (lslidar_driver) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[2.616065] (-) TimerEvent: {}
+[2.717194] (-) TimerEvent: {}
+[2.763046] (lslidar_driver) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.817503] (-) TimerEvent: {}
+[2.918732] (-) TimerEvent: {}
+[2.980781] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_COMMON\n'}
+[2.981437] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_KDTREE\n'}
+[2.982034] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_OCTREE\n'}
+[2.982513] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_SEARCH\n'}
+[2.982985] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_SAMPLE_CONSENSUS\n'}
+[2.983448] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_FILTERS\n'}
+[2.983943] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_2D\n'}
+[2.984343] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_GEOMETRY\n'}
+[2.984681] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_IO\n'}
+[2.985233] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_FEATURES\n'}
+[2.985741] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_ML\n'}
+[2.986165] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_SEGMENTATION\n'}
+[2.986750] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_VISUALIZATION\n'}
+[2.987314] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_SURFACE\n'}
+[2.987827] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_REGISTRATION\n'}
+[2.988398] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_KEYPOINTS\n'}
+[2.988949] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_TRACKING\n'}
+[2.989446] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_RECOGNITION\n'}
+[2.990070] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_STEREO\n'}
+[2.990513] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_APPS\n'}
+[2.991560] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_IN_HAND_SCANNER\n'}
+[2.991914] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_MODELER\n'}
+[2.992253] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_POINT_CLOUD_EDITOR\n'}
+[2.992591] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_OUTOFCORE\n'}
+[2.993086] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_PEOPLE\n'}
+[2.997881] (lslidar_driver) StdoutLine: {'line': b'-- Found diagnostic_updater: 4.0.6 (/opt/ros/humble/share/diagnostic_updater/cmake)\n'}
+[3.018738] (-) TimerEvent: {}
+[3.028229] (lslidar_driver) StdoutLine: {'line': b'-- Found lslidar_msgs: 1.2.0 (/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake)\n'}
+[3.052079] (lslidar_driver) StdoutLine: {'line': b'-- Found pluginlib: 5.1.3 (/opt/ros/humble/share/pluginlib/cmake)\n'}
+[3.069137] (lslidar_driver) StdoutLine: {'line': b'-- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)\n'}
+[3.118889] (-) TimerEvent: {}
+[3.219516] (-) TimerEvent: {}
+[3.308877] (lslidar_driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.319635] (-) TimerEvent: {}
+[3.420538] (-) TimerEvent: {}
+[3.431891] (lslidar_driver) StdoutLine: {'line': b'-- Generating done\n'}
+[3.449309] (lslidar_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/elf/elf_slam_ws/build/lslidar_driver\n'}
+[3.486660] (lslidar_driver) JobEnded: {'identifier': 'lslidar_driver', 'rc': 'SIGINT'}
+[3.498295] (-) EventReactorShutdown: {}

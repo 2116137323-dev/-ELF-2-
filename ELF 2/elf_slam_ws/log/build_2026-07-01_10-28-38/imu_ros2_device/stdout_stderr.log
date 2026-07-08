@@ -1,0 +1,41 @@
+running egg_info
+creating ../../build/imu_ros2_device/imu_ros2_device.egg-info
+writing ../../build/imu_ros2_device/imu_ros2_device.egg-info/PKG-INFO
+writing dependency_links to ../../build/imu_ros2_device/imu_ros2_device.egg-info/dependency_links.txt
+writing entry points to ../../build/imu_ros2_device/imu_ros2_device.egg-info/entry_points.txt
+writing requirements to ../../build/imu_ros2_device/imu_ros2_device.egg-info/requires.txt
+writing top-level names to ../../build/imu_ros2_device/imu_ros2_device.egg-info/top_level.txt
+writing manifest file '../../build/imu_ros2_device/imu_ros2_device.egg-info/SOURCES.txt'
+reading manifest file '../../build/imu_ros2_device/imu_ros2_device.egg-info/SOURCES.txt'
+writing manifest file '../../build/imu_ros2_device/imu_ros2_device.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/elf/elf_slam_ws/build/imu_ros2_device/build
+creating /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib
+creating /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device
+copying imu_ros2_device/ybimu_driver.py -> /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device
+copying imu_ros2_device/__init__.py -> /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device
+running install
+running install_lib
+creating /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device
+copying /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device/ybimu_driver.py -> /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device
+copying /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device/__init__.py -> /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device
+byte-compiling /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device/ybimu_driver.py to ybimu_driver.cpython-310.pyc
+byte-compiling /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index
+creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index/resource_index
+creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index/resource_index/packages
+copying resource/imu_ros2_device -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index/resource_index/packages
+copying package.xml -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device
+creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/launch
+copying launch/ybimu_display.launch.py -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/launch
+creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/rviz
+copying rviz/ybimu.rviz -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/rviz
+creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/config
+copying config/imu_filter_param.yaml -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/config
+running install_egg_info
+Copying ../../build/imu_ros2_device/imu_ros2_device.egg-info to /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device-0.0.1-py3.10.egg-info
+running install_scripts
+Installing ybimu_driver script to /home/elf/elf_slam_ws/install/imu_ros2_device/lib/imu_ros2_device
+writing list of installed files to '/home/elf/elf_slam_ws/build/imu_ros2_device/install.log'

@@ -1,0 +1,60 @@
+[1.554s] Invoking command in '/home/elf/elf_slam_ws/src/elf_slam': PYTHONPATH=/home/elf/elf_slam_ws/build/elf_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/elf_slam build --build-base /home/elf/elf_slam_ws/build/elf_slam/build install --record /home/elf/elf_slam_ws/build/elf_slam/install.log --single-version-externally-managed install_data
+[1.930s] running egg_info
+[1.931s] creating ../../build/elf_slam/elf_slam.egg-info
+[1.932s] writing ../../build/elf_slam/elf_slam.egg-info/PKG-INFO
+[1.933s] writing dependency_links to ../../build/elf_slam/elf_slam.egg-info/dependency_links.txt
+[1.933s] writing entry points to ../../build/elf_slam/elf_slam.egg-info/entry_points.txt
+[1.933s] writing requirements to ../../build/elf_slam/elf_slam.egg-info/requires.txt
+[1.934s] writing top-level names to ../../build/elf_slam/elf_slam.egg-info/top_level.txt
+[1.934s] writing manifest file '../../build/elf_slam/elf_slam.egg-info/SOURCES.txt'
+[1.938s] reading manifest file '../../build/elf_slam/elf_slam.egg-info/SOURCES.txt'
+[1.940s] writing manifest file '../../build/elf_slam/elf_slam.egg-info/SOURCES.txt'
+[1.940s] running build
+[1.940s] running build_py
+[1.940s] creating /home/elf/elf_slam_ws/build/elf_slam/build
+[1.941s] creating /home/elf/elf_slam_ws/build/elf_slam/build/lib
+[1.941s] creating /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam
+[1.941s] copying elf_slam/encoder_bridge.py -> /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam
+[1.941s] copying elf_slam/scan_stamp_fix.py -> /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam
+[1.941s] copying elf_slam/__init__.py -> /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam
+[1.941s] copying elf_slam/diff_drive_controller.py -> /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam
+[1.941s] running install
+[1.942s] running install_lib
+[1.944s] creating /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam
+[1.944s] copying /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam/encoder_bridge.py -> /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam
+[1.944s] copying /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam/scan_stamp_fix.py -> /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam
+[1.944s] copying /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam/__init__.py -> /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam
+[1.944s] copying /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam/diff_drive_controller.py -> /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam
+[1.945s] byte-compiling /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam/encoder_bridge.py to encoder_bridge.cpython-310.pyc
+[1.947s] byte-compiling /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam/scan_stamp_fix.py to scan_stamp_fix.cpython-310.pyc
+[1.949s] byte-compiling /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam/__init__.py to __init__.cpython-310.pyc
+[1.949s] byte-compiling /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam/diff_drive_controller.py to diff_drive_controller.cpython-310.pyc
+[1.951s] running install_data
+[1.951s] creating /home/elf/elf_slam_ws/install/elf_slam/share/ament_index
+[1.951s] creating /home/elf/elf_slam_ws/install/elf_slam/share/ament_index/resource_index
+[1.951s] creating /home/elf/elf_slam_ws/install/elf_slam/share/ament_index/resource_index/packages
+[1.952s] copying resource/elf_slam -> /home/elf/elf_slam_ws/install/elf_slam/share/ament_index/resource_index/packages
+[1.952s] copying package.xml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam
+[1.952s] creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch
+[1.952s] copying launch/online_async_nav_launch.py -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch
+[1.952s] copying launch/save_map_launch.py -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch
+[1.953s] copying launch/online_async_launch.py -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch
+[1.953s] creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config
+[1.953s] copying config/nav2_params_online_slam.yaml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config
+[1.953s] copying config/diff_drive_params.yaml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config
+[1.953s] copying config/mapper_params_online_async.yaml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config
+[1.953s] copying config/nav2_online_slam.rviz -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config
+[1.953s] creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/urdf
+[1.953s] copying urdf/elf_robot.urdf -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/urdf
+[1.953s] creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/scripts
+[1.953s] copying scripts/start_rviz.sh -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/scripts
+[1.953s] creating /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+[1.953s] copying scripts/encoder_raw -> /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+[1.953s] running install_egg_info
+[1.958s] Copying ../../build/elf_slam/elf_slam.egg-info to /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam-0.0.0-py3.10.egg-info
+[1.959s] running install_scripts
+[2.004s] Installing diff_drive_controller script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+[2.004s] Installing encoder_bridge script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+[2.005s] Installing scan_stamp_fix script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+[2.005s] writing list of installed files to '/home/elf/elf_slam_ws/build/elf_slam/install.log'
+[2.094s] Invoked command in '/home/elf/elf_slam_ws/src/elf_slam' returned '0': PYTHONPATH=/home/elf/elf_slam_ws/build/elf_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/elf_slam build --build-base /home/elf/elf_slam_ws/build/elf_slam/build install --record /home/elf/elf_slam_ws/build/elf_slam/install.log --single-version-externally-managed install_data

@@ -1,0 +1,21 @@
+[1.013s] Invoking command in '/home/elf/elf_slam_ws/build/elf_slam': PYTHONPATH=/home/elf/elf_slam_ws/build/elf_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/elf/elf_slam_ws/build/elf_slam/build --no-deps symlink_data
+[1.384s] running develop
+[1.639s] running egg_info
+[1.640s] writing elf_slam.egg-info/PKG-INFO
+[1.640s] writing dependency_links to elf_slam.egg-info/dependency_links.txt
+[1.640s] writing entry points to elf_slam.egg-info/entry_points.txt
+[1.640s] writing requirements to elf_slam.egg-info/requires.txt
+[1.640s] writing top-level names to elf_slam.egg-info/top_level.txt
+[1.644s] reading manifest file 'elf_slam.egg-info/SOURCES.txt'
+[1.645s] writing manifest file 'elf_slam.egg-info/SOURCES.txt'
+[1.648s] running build_ext
+[1.648s] Creating /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf-slam.egg-link (link to .)
+[1.649s] Installing diff_drive_controller script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+[1.651s] Installing encoder_bridge script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+[1.651s] Installing scan_stamp_fix script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+[1.652s] 
+[1.652s] Installed /home/elf/elf_slam_ws/build/elf_slam
+[1.652s] running symlink_data
+[1.653s] symbolically linking /home/elf/elf_slam_ws/build/elf_slam/launch/online_async_launch.py -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch
+[1.653s] error: [Errno 17] File exists: '/home/elf/elf_slam_ws/build/elf_slam/launch/online_async_launch.py' -> '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch/online_async_launch.py'
+[1.744s] Invoked command in '/home/elf/elf_slam_ws/build/elf_slam' returned '1': PYTHONPATH=/home/elf/elf_slam_ws/build/elf_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/elf/elf_slam_ws/build/elf_slam/build --no-deps symlink_data

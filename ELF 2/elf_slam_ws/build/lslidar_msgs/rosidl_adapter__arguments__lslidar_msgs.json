@@ -1,0 +1,10 @@
+{
+  "package_name": "lslidar_msgs",
+  "non_idl_tuples": [
+    "/home/elf/elf_slam_ws/src/lslidar_msgs:msg/LslidarDifop.msg",
+    "/home/elf/elf_slam_ws/src/lslidar_msgs:msg/LslidarPacket.msg",
+    "/home/elf/elf_slam_ws/src/lslidar_msgs:msg/LslidarPoint.msg",
+    "/home/elf/elf_slam_ws/src/lslidar_msgs:msg/LslidarScan.msg",
+    "/home/elf/elf_slam_ws/src/lslidar_msgs:msg/LslidarSweep.msg"
+  ]
+}

@@ -1,0 +1,9 @@
+README.md
+setup.py
+../../build/YbImuLib/YbImuLib.egg-info/PKG-INFO
+../../build/YbImuLib/YbImuLib.egg-info/SOURCES.txt
+../../build/YbImuLib/YbImuLib.egg-info/dependency_links.txt
+../../build/YbImuLib/YbImuLib.egg-info/top_level.txt
+YbImuLib/YbImuI2cLib.py
+YbImuLib/YbImuSerialLib.py
+YbImuLib/__init__.py

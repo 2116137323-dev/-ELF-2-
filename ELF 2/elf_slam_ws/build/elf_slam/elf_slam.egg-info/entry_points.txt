@@ -1,0 +1,6 @@
+[console_scripts]
+diff_drive_controller = elf_slam.diff_drive_controller:main
+encoder_bridge = elf_slam.encoder_bridge:main
+robot_description_publisher = elf_slam.robot_description_publisher:main
+scan_stamp_fix = elf_slam.scan_stamp_fix:main
+

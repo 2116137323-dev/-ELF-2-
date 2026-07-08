@@ -1,0 +1,43 @@
+[1.184s] Invoking command in '/home/elf/elf_slam_ws/src/imu_ros2_device': PYTHONPATH=/home/elf/elf_slam_ws/build/imu_ros2_device/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imu_ros2_device build --build-base /home/elf/elf_slam_ws/build/imu_ros2_device/build install --record /home/elf/elf_slam_ws/build/imu_ros2_device/install.log --single-version-externally-managed install_data
+[1.558s] running egg_info
+[1.559s] creating ../../build/imu_ros2_device/imu_ros2_device.egg-info
+[1.559s] writing ../../build/imu_ros2_device/imu_ros2_device.egg-info/PKG-INFO
+[1.560s] writing dependency_links to ../../build/imu_ros2_device/imu_ros2_device.egg-info/dependency_links.txt
+[1.561s] writing entry points to ../../build/imu_ros2_device/imu_ros2_device.egg-info/entry_points.txt
+[1.561s] writing requirements to ../../build/imu_ros2_device/imu_ros2_device.egg-info/requires.txt
+[1.561s] writing top-level names to ../../build/imu_ros2_device/imu_ros2_device.egg-info/top_level.txt
+[1.561s] writing manifest file '../../build/imu_ros2_device/imu_ros2_device.egg-info/SOURCES.txt'
+[1.565s] reading manifest file '../../build/imu_ros2_device/imu_ros2_device.egg-info/SOURCES.txt'
+[1.566s] writing manifest file '../../build/imu_ros2_device/imu_ros2_device.egg-info/SOURCES.txt'
+[1.566s] running build
+[1.566s] running build_py
+[1.566s] creating /home/elf/elf_slam_ws/build/imu_ros2_device/build
+[1.567s] creating /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib
+[1.567s] creating /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device
+[1.567s] copying imu_ros2_device/ybimu_driver.py -> /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device
+[1.567s] copying imu_ros2_device/__init__.py -> /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device
+[1.567s] running install
+[1.568s] running install_lib
+[1.569s] creating /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device
+[1.569s] copying /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device/ybimu_driver.py -> /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device
+[1.570s] copying /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device/__init__.py -> /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device
+[1.571s] byte-compiling /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device/ybimu_driver.py to ybimu_driver.cpython-310.pyc
+[1.573s] byte-compiling /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device/__init__.py to __init__.cpython-310.pyc
+[1.573s] running install_data
+[1.574s] creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index
+[1.574s] creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index/resource_index
+[1.574s] creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index/resource_index/packages
+[1.575s] copying resource/imu_ros2_device -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index/resource_index/packages
+[1.575s] copying package.xml -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device
+[1.575s] creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/launch
+[1.576s] copying launch/ybimu_display.launch.py -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/launch
+[1.576s] creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/rviz
+[1.576s] copying rviz/ybimu.rviz -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/rviz
+[1.577s] creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/config
+[1.577s] copying config/imu_filter_param.yaml -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/config
+[1.577s] running install_egg_info
+[1.579s] Copying ../../build/imu_ros2_device/imu_ros2_device.egg-info to /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device-0.0.1-py3.10.egg-info
+[1.580s] running install_scripts
+[1.625s] Installing ybimu_driver script to /home/elf/elf_slam_ws/install/imu_ros2_device/lib/imu_ros2_device
+[1.625s] writing list of installed files to '/home/elf/elf_slam_ws/build/imu_ros2_device/install.log'
+[1.715s] Invoked command in '/home/elf/elf_slam_ws/src/imu_ros2_device' returned '0': PYTHONPATH=/home/elf/elf_slam_ws/build/imu_ros2_device/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imu_ros2_device build --build-base /home/elf/elf_slam_ws/build/imu_ros2_device/build install --record /home/elf/elf_slam_ws/build/imu_ros2_device/install.log --single-version-externally-managed install_data

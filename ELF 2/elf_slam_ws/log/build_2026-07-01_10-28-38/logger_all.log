@@ -1,0 +1,396 @@
+[0.152s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.152s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f90aae110>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f90c43b50>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f90c43b50>>)
+[0.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.391s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/elf/elf_slam_ws'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.409s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extensions ['ignore', 'ignore_ament_install']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extension 'ignore'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extension 'ignore_ament_install'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extensions ['colcon_pkg']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extension 'colcon_pkg'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extensions ['colcon_meta']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extension 'colcon_meta'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extensions ['ros']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extension 'ros'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extensions ['cmake', 'python']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extension 'cmake'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extension 'python'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extensions ['python_setup_py']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/YbImuLib) by extension 'python_setup_py'
+[0.855s] DEBUG:colcon.colcon_core.package_identification:Package 'src/YbImuLib' with type 'python' and name 'YbImuLib'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extensions ['ignore', 'ignore_ament_install']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extension 'ignore'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extension 'ignore_ament_install'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extensions ['colcon_pkg']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extension 'colcon_pkg'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extensions ['colcon_meta']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extension 'colcon_meta'
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extensions ['ros']
+[0.856s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extension 'ros'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extensions ['cmake', 'python']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extension 'cmake'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extension 'python'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extensions ['python_setup_py']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw) by extension 'python_setup_py'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extensions ['ignore', 'ignore_ament_install']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extension 'ignore'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extension 'ignore_ament_install'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extensions ['colcon_pkg']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extension 'colcon_pkg'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extensions ['colcon_meta']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extension 'colcon_meta'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extensions ['ros']
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extension 'ros'
+[0.857s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extensions ['cmake', 'python']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extension 'cmake'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extension 'python'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extensions ['python_setup_py']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_encoder_raw/src) by extension 'python_setup_py'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_slam) by extensions ['ignore', 'ignore_ament_install']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_slam) by extension 'ignore'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_slam) by extension 'ignore_ament_install'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_slam) by extensions ['colcon_pkg']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_slam) by extension 'colcon_pkg'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_slam) by extensions ['colcon_meta']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_slam) by extension 'colcon_meta'
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_slam) by extensions ['ros']
+[0.858s] Level 1:colcon.colcon_core.package_identification:_identify(src/elf_slam) by extension 'ros'
+[0.863s] DEBUG:colcon.colcon_core.package_identification:Package 'src/elf_slam' with type 'ros.ament_python' and name 'elf_slam'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros2_device) by extensions ['ignore', 'ignore_ament_install']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros2_device) by extension 'ignore'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros2_device) by extension 'ignore_ament_install'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros2_device) by extensions ['colcon_pkg']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros2_device) by extension 'colcon_pkg'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros2_device) by extensions ['colcon_meta']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros2_device) by extension 'colcon_meta'
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros2_device) by extensions ['ros']
+[0.863s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_ros2_device) by extension 'ros'
+[0.865s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_ros2_device' with type 'ros.ament_python' and name 'imu_ros2_device'
+[0.865s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_driver) by extension 'ignore'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_driver) by extension 'ignore_ament_install'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_driver) by extensions ['colcon_pkg']
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_driver) by extension 'colcon_pkg'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_driver) by extensions ['colcon_meta']
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_driver) by extension 'colcon_meta'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_driver) by extensions ['ros']
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_driver) by extension 'ros'
+[0.872s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lslidar_driver' with type 'ros.ament_cmake' and name 'lslidar_driver'
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_msgs) by extension 'ignore'
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_msgs) by extension 'ignore_ament_install'
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_msgs) by extensions ['colcon_pkg']
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_msgs) by extension 'colcon_pkg'
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_msgs) by extensions ['colcon_meta']
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_msgs) by extension 'colcon_meta'
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_msgs) by extensions ['ros']
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(src/lslidar_msgs) by extension 'ros'
+[0.873s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lslidar_msgs' with type 'ros.ament_cmake' and name 'lslidar_msgs'
+[0.874s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.874s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.874s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.874s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.874s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.945s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.945s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.946s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/elf/elf_slam_ws/install/lslidar_driver' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.946s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/elf/elf_slam_ws/install/lslidar_msgs' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.946s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/elf/elf_slam_ws/install/imu_ros2_device' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.946s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/elf/elf_slam_ws/install/elf_slam' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.946s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/elf/elf_slam_ws/install/lslidar_driver' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.947s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/elf/elf_slam_ws/install/lslidar_msgs' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.947s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/elf/elf_slam_ws/install
+[0.949s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 321 installed packages in /opt/ros/humble
+[0.951s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.011s] Level 5:colcon.colcon_core.verb:set package 'YbImuLib' build argument 'cmake_args' from command line to 'None'
+[1.011s] Level 5:colcon.colcon_core.verb:set package 'YbImuLib' build argument 'cmake_target' from command line to 'None'
+[1.011s] Level 5:colcon.colcon_core.verb:set package 'YbImuLib' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.011s] Level 5:colcon.colcon_core.verb:set package 'YbImuLib' build argument 'cmake_clean_cache' from command line to 'False'
+[1.011s] Level 5:colcon.colcon_core.verb:set package 'YbImuLib' build argument 'cmake_clean_first' from command line to 'False'
+[1.011s] Level 5:colcon.colcon_core.verb:set package 'YbImuLib' build argument 'cmake_force_configure' from command line to 'False'
+[1.011s] Level 5:colcon.colcon_core.verb:set package 'YbImuLib' build argument 'ament_cmake_args' from command line to 'None'
+[1.011s] Level 5:colcon.colcon_core.verb:set package 'YbImuLib' build argument 'catkin_cmake_args' from command line to 'None'
+[1.011s] Level 5:colcon.colcon_core.verb:set package 'YbImuLib' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.011s] DEBUG:colcon.colcon_core.verb:Building package 'YbImuLib' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/elf/elf_slam_ws/build/YbImuLib', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/elf/elf_slam_ws/install/YbImuLib', 'merge_install': False, 'path': '/home/elf/elf_slam_ws/src/YbImuLib', 'symlink_install': False, 'test_result_base': None}
+[1.012s] Level 5:colcon.colcon_core.verb:set package 'elf_slam' build argument 'cmake_args' from command line to 'None'
+[1.012s] Level 5:colcon.colcon_core.verb:set package 'elf_slam' build argument 'cmake_target' from command line to 'None'
+[1.012s] Level 5:colcon.colcon_core.verb:set package 'elf_slam' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.012s] Level 5:colcon.colcon_core.verb:set package 'elf_slam' build argument 'cmake_clean_cache' from command line to 'False'
+[1.012s] Level 5:colcon.colcon_core.verb:set package 'elf_slam' build argument 'cmake_clean_first' from command line to 'False'
+[1.012s] Level 5:colcon.colcon_core.verb:set package 'elf_slam' build argument 'cmake_force_configure' from command line to 'False'
+[1.012s] Level 5:colcon.colcon_core.verb:set package 'elf_slam' build argument 'ament_cmake_args' from command line to 'None'
+[1.012s] Level 5:colcon.colcon_core.verb:set package 'elf_slam' build argument 'catkin_cmake_args' from command line to 'None'
+[1.012s] Level 5:colcon.colcon_core.verb:set package 'elf_slam' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.012s] DEBUG:colcon.colcon_core.verb:Building package 'elf_slam' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/elf/elf_slam_ws/build/elf_slam', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/elf/elf_slam_ws/install/elf_slam', 'merge_install': False, 'path': '/home/elf/elf_slam_ws/src/elf_slam', 'symlink_install': False, 'test_result_base': None}
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'lslidar_msgs' build argument 'cmake_args' from command line to 'None'
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'lslidar_msgs' build argument 'cmake_target' from command line to 'None'
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'lslidar_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'lslidar_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'lslidar_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'lslidar_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'lslidar_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'lslidar_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'lslidar_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.013s] DEBUG:colcon.colcon_core.verb:Building package 'lslidar_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/elf/elf_slam_ws/build/lslidar_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/elf/elf_slam_ws/install/lslidar_msgs', 'merge_install': False, 'path': '/home/elf/elf_slam_ws/src/lslidar_msgs', 'symlink_install': False, 'test_result_base': None}
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'imu_ros2_device' build argument 'cmake_args' from command line to 'None'
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'imu_ros2_device' build argument 'cmake_target' from command line to 'None'
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'imu_ros2_device' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.013s] Level 5:colcon.colcon_core.verb:set package 'imu_ros2_device' build argument 'cmake_clean_cache' from command line to 'False'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'imu_ros2_device' build argument 'cmake_clean_first' from command line to 'False'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'imu_ros2_device' build argument 'cmake_force_configure' from command line to 'False'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'imu_ros2_device' build argument 'ament_cmake_args' from command line to 'None'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'imu_ros2_device' build argument 'catkin_cmake_args' from command line to 'None'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'imu_ros2_device' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.014s] DEBUG:colcon.colcon_core.verb:Building package 'imu_ros2_device' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/elf/elf_slam_ws/build/imu_ros2_device', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/elf/elf_slam_ws/install/imu_ros2_device', 'merge_install': False, 'path': '/home/elf/elf_slam_ws/src/imu_ros2_device', 'symlink_install': False, 'test_result_base': None}
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'lslidar_driver' build argument 'cmake_args' from command line to 'None'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'lslidar_driver' build argument 'cmake_target' from command line to 'None'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'lslidar_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'lslidar_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'lslidar_driver' build argument 'cmake_clean_first' from command line to 'False'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'lslidar_driver' build argument 'cmake_force_configure' from command line to 'False'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'lslidar_driver' build argument 'ament_cmake_args' from command line to 'None'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'lslidar_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'lslidar_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.014s] DEBUG:colcon.colcon_core.verb:Building package 'lslidar_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/elf/elf_slam_ws/build/lslidar_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/elf/elf_slam_ws/install/lslidar_driver', 'merge_install': False, 'path': '/home/elf/elf_slam_ws/src/lslidar_driver', 'symlink_install': False, 'test_result_base': None}
+[1.014s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.016s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.017s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/elf/elf_slam_ws/src/YbImuLib'
+[1.020s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.021s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.021s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.026s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/elf/elf_slam_ws/src/lslidar_msgs' with build type 'ament_cmake'
+[1.027s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/elf/elf_slam_ws/src/lslidar_msgs'
+[1.027s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.027s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.034s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/elf/elf_slam_ws/src/elf_slam' with build type 'ament_python'
+[1.035s] Level 1:colcon.colcon_core.shell:create_environment_hook('elf_slam', 'ament_prefix_path')
+[1.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/hook/ament_prefix_path.ps1'
+[1.037s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/hook/ament_prefix_path.dsv'
+[1.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/hook/ament_prefix_path.sh'
+[1.038s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.039s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.485s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/elf/elf_slam_ws/build/lslidar_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake /home/elf/elf_slam_ws/src/lslidar_msgs -DCMAKE_INSTALL_PREFIX=/home/elf/elf_slam_ws/install/lslidar_msgs
+[1.948s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/elf/elf_slam_ws/src/elf_slam'
+[1.948s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.949s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.108s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/elf/elf_slam_ws/src/YbImuLib': PYTHONPATH=/home/elf/elf_slam_ws/build/YbImuLib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/YbImuLib build --build-base /home/elf/elf_slam_ws/build/YbImuLib/build install --record /home/elf/elf_slam_ws/build/YbImuLib/install.log --single-version-externally-managed
+[2.590s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/elf/elf_slam_ws/src/elf_slam': PYTHONPATH=/home/elf/elf_slam_ws/build/elf_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/elf_slam build --build-base /home/elf/elf_slam_ws/build/elf_slam/build install --record /home/elf/elf_slam_ws/build/elf_slam/install.log --single-version-externally-managed install_data
+[2.617s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/elf/elf_slam_ws/src/YbImuLib' returned '0': PYTHONPATH=/home/elf/elf_slam_ws/build/YbImuLib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/YbImuLib build --build-base /home/elf/elf_slam_ws/build/YbImuLib/build install --record /home/elf/elf_slam_ws/build/YbImuLib/install.log --single-version-externally-managed
+[2.620s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/YbImuLib' for CMake module files
+[2.620s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/YbImuLib' for CMake config files
+[2.621s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/YbImuLib/lib'
+[2.621s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/YbImuLib/bin'
+[2.621s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/YbImuLib/lib/pkgconfig/YbImuLib.pc'
+[2.622s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages'
+[2.622s] Level 1:colcon.colcon_core.shell:create_environment_hook('YbImuLib', 'pythonpath')
+[2.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/YbImuLib/share/YbImuLib/hook/pythonpath.ps1'
+[2.624s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/elf/elf_slam_ws/install/YbImuLib/share/YbImuLib/hook/pythonpath.dsv'
+[2.625s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/YbImuLib/share/YbImuLib/hook/pythonpath.sh'
+[2.626s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/YbImuLib/bin'
+[2.626s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(YbImuLib)
+[2.626s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/YbImuLib/share/YbImuLib/package.ps1'
+[2.628s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/elf/elf_slam_ws/install/YbImuLib/share/YbImuLib/package.dsv'
+[2.628s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/YbImuLib/share/YbImuLib/package.sh'
+[2.629s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/YbImuLib/share/YbImuLib/package.bash'
+[2.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/YbImuLib/share/YbImuLib/package.zsh'
+[2.631s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/elf/elf_slam_ws/install/YbImuLib/share/colcon-core/packages/YbImuLib)
+[2.631s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/elf/elf_slam_ws/src/imu_ros2_device' with build type 'ament_python'
+[2.632s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_ros2_device', 'ament_prefix_path')
+[2.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/hook/ament_prefix_path.ps1'
+[2.633s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/hook/ament_prefix_path.dsv'
+[2.634s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/hook/ament_prefix_path.sh'
+[2.635s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.635s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.113s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/elf/elf_slam_ws/src/imu_ros2_device'
+[3.114s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.115s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.129s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/elf_slam' for CMake module files
+[3.130s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/elf/elf_slam_ws/src/elf_slam' returned '0': PYTHONPATH=/home/elf/elf_slam_ws/build/elf_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/elf_slam build --build-base /home/elf/elf_slam_ws/build/elf_slam/build install --record /home/elf/elf_slam_ws/build/elf_slam/install.log --single-version-externally-managed install_data
+[3.130s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/elf_slam' for CMake config files
+[3.131s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/elf_slam/lib'
+[3.131s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/elf_slam/bin'
+[3.131s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/elf_slam/lib/pkgconfig/elf_slam.pc'
+[3.131s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages'
+[3.131s] Level 1:colcon.colcon_core.shell:create_environment_hook('elf_slam', 'pythonpath')
+[3.132s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/hook/pythonpath.ps1'
+[3.132s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/hook/pythonpath.dsv'
+[3.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/hook/pythonpath.sh'
+[3.133s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/elf_slam/bin'
+[3.134s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(elf_slam)
+[3.134s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/package.ps1'
+[3.135s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/package.dsv'
+[3.135s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/package.sh'
+[3.135s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/package.bash'
+[3.136s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/package.zsh'
+[3.136s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/elf/elf_slam_ws/install/elf_slam/share/colcon-core/packages/elf_slam)
+[3.822s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/elf/elf_slam_ws/src/imu_ros2_device': PYTHONPATH=/home/elf/elf_slam_ws/build/imu_ros2_device/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imu_ros2_device build --build-base /home/elf/elf_slam_ws/build/imu_ros2_device/build install --record /home/elf/elf_slam_ws/build/imu_ros2_device/install.log --single-version-externally-managed install_data
+[4.352s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/imu_ros2_device' for CMake module files
+[4.353s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/elf/elf_slam_ws/src/imu_ros2_device' returned '0': PYTHONPATH=/home/elf/elf_slam_ws/build/imu_ros2_device/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imu_ros2_device build --build-base /home/elf/elf_slam_ws/build/imu_ros2_device/build install --record /home/elf/elf_slam_ws/build/imu_ros2_device/install.log --single-version-externally-managed install_data
+[4.354s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/imu_ros2_device' for CMake config files
+[4.356s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/imu_ros2_device/lib'
+[4.357s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/imu_ros2_device/bin'
+[4.357s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/imu_ros2_device/lib/pkgconfig/imu_ros2_device.pc'
+[4.358s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages'
+[4.358s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_ros2_device', 'pythonpath')
+[4.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/hook/pythonpath.ps1'
+[4.361s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/hook/pythonpath.dsv'
+[4.362s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/hook/pythonpath.sh'
+[4.365s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/imu_ros2_device/bin'
+[4.365s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_ros2_device)
+[4.366s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/package.ps1'
+[4.369s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/package.dsv'
+[4.370s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/package.sh'
+[4.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/package.bash'
+[4.373s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/package.zsh'
+[4.374s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/elf/elf_slam_ws/install/imu_ros2_device/share/colcon-core/packages/imu_ros2_device)
+[5.471s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/elf/elf_slam_ws/build/lslidar_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake /home/elf/elf_slam_ws/src/lslidar_msgs -DCMAKE_INSTALL_PREFIX=/home/elf/elf_slam_ws/install/lslidar_msgs
+[5.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/elf/elf_slam_ws/build/lslidar_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake --build /home/elf/elf_slam_ws/build/lslidar_msgs -- -j8 -l8
+[12.237s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/elf/elf_slam_ws/build/lslidar_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake --build /home/elf/elf_slam_ws/build/lslidar_msgs -- -j8 -l8
+[12.267s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/elf/elf_slam_ws/build/lslidar_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake --install /home/elf/elf_slam_ws/build/lslidar_msgs
+[12.397s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lslidar_msgs)
+[12.399s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs' for CMake module files
+[12.400s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/elf/elf_slam_ws/build/lslidar_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake --install /home/elf/elf_slam_ws/build/lslidar_msgs
+[12.403s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs' for CMake config files
+[12.404s] Level 1:colcon.colcon_core.shell:create_environment_hook('lslidar_msgs', 'cmake_prefix_path')
+[12.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/cmake_prefix_path.ps1'
+[12.407s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/cmake_prefix_path.dsv'
+[12.408s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/cmake_prefix_path.sh'
+[12.410s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs/lib'
+[12.410s] Level 1:colcon.colcon_core.shell:create_environment_hook('lslidar_msgs', 'ld_library_path_lib')
+[12.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/ld_library_path_lib.ps1'
+[12.413s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/ld_library_path_lib.dsv'
+[12.415s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/ld_library_path_lib.sh'
+[12.416s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs/bin'
+[12.416s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs/lib/pkgconfig/lslidar_msgs.pc'
+[12.417s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs/lib/python3.10/site-packages'
+[12.419s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs/bin'
+[12.421s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.ps1'
+[12.423s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.dsv'
+[12.425s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.sh'
+[12.427s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.bash'
+[12.428s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.zsh'
+[12.429s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/elf/elf_slam_ws/install/lslidar_msgs/share/colcon-core/packages/lslidar_msgs)
+[12.432s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lslidar_msgs)
+[12.433s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs' for CMake module files
+[12.436s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs' for CMake config files
+[12.437s] Level 1:colcon.colcon_core.shell:create_environment_hook('lslidar_msgs', 'cmake_prefix_path')
+[12.438s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/cmake_prefix_path.ps1'
+[12.440s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/cmake_prefix_path.dsv'
+[12.441s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/cmake_prefix_path.sh'
+[12.443s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs/lib'
+[12.443s] Level 1:colcon.colcon_core.shell:create_environment_hook('lslidar_msgs', 'ld_library_path_lib')
+[12.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/ld_library_path_lib.ps1'
+[12.445s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/ld_library_path_lib.dsv'
+[12.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/hook/ld_library_path_lib.sh'
+[12.445s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs/bin'
+[12.446s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs/lib/pkgconfig/lslidar_msgs.pc'
+[12.446s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs/lib/python3.10/site-packages'
+[12.446s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_msgs/bin'
+[12.447s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.ps1'
+[12.448s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.dsv'
+[12.448s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.sh'
+[12.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.bash'
+[12.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.zsh'
+[12.450s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/elf/elf_slam_ws/install/lslidar_msgs/share/colcon-core/packages/lslidar_msgs)
+[12.450s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/elf/elf_slam_ws/src/lslidar_driver' with build type 'ament_cmake'
+[12.451s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/elf/elf_slam_ws/src/lslidar_driver'
+[12.451s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[12.451s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.470s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/elf/elf_slam_ws/build/lslidar_driver': CMAKE_PREFIX_PATH=/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake /home/elf/elf_slam_ws/src/lslidar_driver -DCMAKE_INSTALL_PREFIX=/home/elf/elf_slam_ws/install/lslidar_driver
+[18.752s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/elf/elf_slam_ws/build/lslidar_driver' returned '0': CMAKE_PREFIX_PATH=/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake /home/elf/elf_slam_ws/src/lslidar_driver -DCMAKE_INSTALL_PREFIX=/home/elf/elf_slam_ws/install/lslidar_driver
+[18.756s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/elf/elf_slam_ws/build/lslidar_driver': CMAKE_PREFIX_PATH=/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake --build /home/elf/elf_slam_ws/build/lslidar_driver -- -j8 -l8
+[51.800s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/elf/elf_slam_ws/build/lslidar_driver' returned '0': CMAKE_PREFIX_PATH=/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake --build /home/elf/elf_slam_ws/build/lslidar_driver -- -j8 -l8
+[51.811s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/elf/elf_slam_ws/build/lslidar_driver': CMAKE_PREFIX_PATH=/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake --install /home/elf/elf_slam_ws/build/lslidar_driver
+[51.853s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lslidar_driver)
+[51.855s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver' for CMake module files
+[51.857s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/elf/elf_slam_ws/build/lslidar_driver' returned '0': CMAKE_PREFIX_PATH=/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble /usr/bin/cmake --install /home/elf/elf_slam_ws/build/lslidar_driver
+[51.858s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver' for CMake config files
+[51.858s] Level 1:colcon.colcon_core.shell:create_environment_hook('lslidar_driver', 'cmake_prefix_path')
+[51.858s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/hook/cmake_prefix_path.ps1'
+[51.863s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/hook/cmake_prefix_path.dsv'
+[51.866s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/hook/cmake_prefix_path.sh'
+[51.868s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver/lib'
+[51.869s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver/bin'
+[51.869s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver/lib/pkgconfig/lslidar_driver.pc'
+[51.870s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver/lib/python3.10/site-packages'
+[51.872s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver/bin'
+[51.874s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.ps1'
+[51.877s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.dsv'
+[51.879s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.sh'
+[51.881s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.bash'
+[51.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.zsh'
+[51.886s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/elf/elf_slam_ws/install/lslidar_driver/share/colcon-core/packages/lslidar_driver)
+[51.889s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lslidar_driver)
+[51.890s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver' for CMake module files
+[51.892s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver' for CMake config files
+[51.893s] Level 1:colcon.colcon_core.shell:create_environment_hook('lslidar_driver', 'cmake_prefix_path')
+[51.894s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/hook/cmake_prefix_path.ps1'
+[51.897s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/hook/cmake_prefix_path.dsv'
+[51.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/hook/cmake_prefix_path.sh'
+[51.900s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver/lib'
+[51.900s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver/bin'
+[51.900s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver/lib/pkgconfig/lslidar_driver.pc'
+[51.902s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver/lib/python3.10/site-packages'
+[51.903s] Level 1:colcon.colcon_core.environment:checking '/home/elf/elf_slam_ws/install/lslidar_driver/bin'
+[51.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.ps1'
+[51.908s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.dsv'
+[51.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.sh'
+[51.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.bash'
+[51.912s] INFO:colcon.colcon_core.shell:Creating package script '/home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.zsh'
+[51.913s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/elf/elf_slam_ws/install/lslidar_driver/share/colcon-core/packages/lslidar_driver)
+[51.913s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[51.914s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[51.914s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[51.914s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[51.917s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[51.918s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/elf/elf_slam_ws/install/local_setup.ps1'
+[51.919s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/elf/elf_slam_ws/install/_local_setup_util_ps1.py'
+[51.922s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/elf/elf_slam_ws/install/setup.ps1'
+[51.924s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/elf/elf_slam_ws/install/local_setup.sh'
+[51.925s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/elf/elf_slam_ws/install/_local_setup_util_sh.py'
+[51.926s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/elf/elf_slam_ws/install/setup.sh'
+[51.928s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/elf/elf_slam_ws/install/local_setup.bash'
+[51.928s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/elf/elf_slam_ws/install/setup.bash'
+[51.930s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/elf/elf_slam_ws/install/local_setup.zsh'
+[51.930s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/elf/elf_slam_ws/install/setup.zsh'

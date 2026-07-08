@@ -1,0 +1,12 @@
+# ELF 救援机器人几何参数（与 Nav2 footprint、URDF 一致）
+# 坐标系：base_footprint，+X 为车头方向
+robot:
+  length: 0.37          # 车长 37 cm
+  width: 0.28           # 车宽 28 cm（含履带外缘）
+  half_length: 0.185
+  half_width: 0.14
+  body_height: 0.16          # 视觉模型最高点（含天线），平面 footprint 仍为 37×28 cm
+  track_width: 0.05     # 单侧履带宽度 5 cm
+  track_length: 0.34    # 履带长度 34 cm
+  track_height: 0.04
+  wheel_diameter: 0.153 # 编码器/里程计轮径（encoder_bridge）

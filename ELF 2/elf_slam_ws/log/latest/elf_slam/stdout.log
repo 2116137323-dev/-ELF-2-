@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/elf_slam/elf_slam.egg-info/PKG-INFO
+writing dependency_links to ../../build/elf_slam/elf_slam.egg-info/dependency_links.txt
+writing entry points to ../../build/elf_slam/elf_slam.egg-info/entry_points.txt
+writing requirements to ../../build/elf_slam/elf_slam.egg-info/requires.txt
+writing top-level names to ../../build/elf_slam/elf_slam.egg-info/top_level.txt
+reading manifest file '../../build/elf_slam/elf_slam.egg-info/SOURCES.txt'
+writing manifest file '../../build/elf_slam/elf_slam.egg-info/SOURCES.txt'
+running build
+running build_py
+copying elf_slam/encoder_bridge.py -> /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam
+running install
+running install_lib
+copying /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam/encoder_bridge.py -> /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam
+byte-compiling /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam/encoder_bridge.py to encoder_bridge.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/elf_slam/elf_slam.egg-info to /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam-0.0.0-py3.10.egg-info
+running install_scripts
+Installing diff_drive_controller script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+Installing encoder_bridge script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+Installing robot_description_publisher script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+Installing scan_stamp_fix script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam
+writing list of installed files to '/home/elf/elf_slam_ws/build/elf_slam/install.log'

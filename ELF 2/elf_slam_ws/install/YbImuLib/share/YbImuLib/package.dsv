@@ -1,0 +1,3 @@
+source;share/YbImuLib/hook/pythonpath.ps1
+source;share/YbImuLib/hook/pythonpath.dsv
+source;share/YbImuLib/hook/pythonpath.sh

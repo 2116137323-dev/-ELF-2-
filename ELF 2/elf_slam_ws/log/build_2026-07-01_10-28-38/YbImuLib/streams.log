@@ -1,0 +1,31 @@
+[1.089s] Invoking command in '/home/elf/elf_slam_ws/src/YbImuLib': PYTHONPATH=/home/elf/elf_slam_ws/build/YbImuLib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/YbImuLib build --build-base /home/elf/elf_slam_ws/build/YbImuLib/build install --record /home/elf/elf_slam_ws/build/YbImuLib/install.log --single-version-externally-managed
+[1.476s] running egg_info
+[1.477s] creating ../../build/YbImuLib/YbImuLib.egg-info
+[1.477s] writing ../../build/YbImuLib/YbImuLib.egg-info/PKG-INFO
+[1.478s] writing dependency_links to ../../build/YbImuLib/YbImuLib.egg-info/dependency_links.txt
+[1.478s] writing top-level names to ../../build/YbImuLib/YbImuLib.egg-info/top_level.txt
+[1.478s] writing manifest file '../../build/YbImuLib/YbImuLib.egg-info/SOURCES.txt'
+[1.482s] reading manifest file '../../build/YbImuLib/YbImuLib.egg-info/SOURCES.txt'
+[1.483s] writing manifest file '../../build/YbImuLib/YbImuLib.egg-info/SOURCES.txt'
+[1.483s] running build
+[1.483s] running build_py
+[1.483s] creating /home/elf/elf_slam_ws/build/YbImuLib/build
+[1.483s] creating /home/elf/elf_slam_ws/build/YbImuLib/build/lib
+[1.483s] creating /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib
+[1.483s] copying YbImuLib/YbImuSerialLib.py -> /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib
+[1.483s] copying YbImuLib/__init__.py -> /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib
+[1.484s] copying YbImuLib/YbImuI2cLib.py -> /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib
+[1.484s] running install
+[1.484s] running install_lib
+[1.486s] creating /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib
+[1.487s] copying /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib/YbImuSerialLib.py -> /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib
+[1.487s] copying /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib/__init__.py -> /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib
+[1.487s] copying /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib/YbImuI2cLib.py -> /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib
+[1.488s] byte-compiling /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib/YbImuSerialLib.py to YbImuSerialLib.cpython-310.pyc
+[1.491s] byte-compiling /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib/__init__.py to __init__.cpython-310.pyc
+[1.492s] byte-compiling /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib/YbImuI2cLib.py to YbImuI2cLib.cpython-310.pyc
+[1.494s] running install_egg_info
+[1.497s] Copying ../../build/YbImuLib/YbImuLib.egg-info to /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib-1.0.0-py3.10.egg-info
+[1.498s] running install_scripts
+[1.529s] writing list of installed files to '/home/elf/elf_slam_ws/build/YbImuLib/install.log'
+[1.598s] Invoked command in '/home/elf/elf_slam_ws/src/YbImuLib' returned '0': PYTHONPATH=/home/elf/elf_slam_ws/build/YbImuLib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/YbImuLib build --build-base /home/elf/elf_slam_ws/build/YbImuLib/build install --record /home/elf/elf_slam_ws/build/YbImuLib/install.log --single-version-externally-managed

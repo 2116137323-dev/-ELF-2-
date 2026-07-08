@@ -1,0 +1,8 @@
+[1.072s] Invoking command in '/home/elf/elf_slam_ws/build/elf_slam': PYTHONPATH=/home/elf/elf_slam_ws/build/elf_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/elf/elf_slam_ws/build/elf_slam/build --no-deps symlink_data
+[1.383s] Traceback (most recent call last):
+[1.383s]   File "/home/elf/elf_slam_ws/build/elf_slam/setup.py", line 44, in <module>
+[1.383s]     build_encoder_raw()
+[1.383s]   File "/home/elf/elf_slam_ws/build/elf_slam/setup.py", line 19, in build_encoder_raw
+[1.383s]     raise RuntimeError(f'encoder source not found: {encoder_source}')
+[1.383s] RuntimeError: encoder source not found: /home/elf/elf_slam_ws/build/elf_slam/src/encoder_raw.c
+[1.438s] Invoked command in '/home/elf/elf_slam_ws/build/elf_slam' returned '1': PYTHONPATH=/home/elf/elf_slam_ws/build/elf_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/elf/elf_slam_ws/build/elf_slam/build --no-deps symlink_data

@@ -1,0 +1,29 @@
+running egg_info
+creating ../../build/YbImuLib/YbImuLib.egg-info
+writing ../../build/YbImuLib/YbImuLib.egg-info/PKG-INFO
+writing dependency_links to ../../build/YbImuLib/YbImuLib.egg-info/dependency_links.txt
+writing top-level names to ../../build/YbImuLib/YbImuLib.egg-info/top_level.txt
+writing manifest file '../../build/YbImuLib/YbImuLib.egg-info/SOURCES.txt'
+reading manifest file '../../build/YbImuLib/YbImuLib.egg-info/SOURCES.txt'
+writing manifest file '../../build/YbImuLib/YbImuLib.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/elf/elf_slam_ws/build/YbImuLib/build
+creating /home/elf/elf_slam_ws/build/YbImuLib/build/lib
+creating /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib
+copying YbImuLib/YbImuSerialLib.py -> /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib
+copying YbImuLib/__init__.py -> /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib
+copying YbImuLib/YbImuI2cLib.py -> /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib
+running install
+running install_lib
+creating /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib
+copying /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib/YbImuSerialLib.py -> /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib
+copying /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib/__init__.py -> /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib
+copying /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib/YbImuI2cLib.py -> /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib
+byte-compiling /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib/YbImuSerialLib.py to YbImuSerialLib.cpython-310.pyc
+byte-compiling /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib/YbImuI2cLib.py to YbImuI2cLib.cpython-310.pyc
+running install_egg_info
+Copying ../../build/YbImuLib/YbImuLib.egg-info to /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib-1.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/elf/elf_slam_ws/build/YbImuLib/install.log'

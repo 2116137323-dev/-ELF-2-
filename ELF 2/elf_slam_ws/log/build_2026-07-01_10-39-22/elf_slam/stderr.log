@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/elf/elf_slam_ws/build/elf_slam/setup.py", line 44, in <module>
+    build_encoder_raw()
+  File "/home/elf/elf_slam_ws/build/elf_slam/setup.py", line 19, in build_encoder_raw
+    raise RuntimeError(f'encoder source not found: {encoder_source}')
+RuntimeError: encoder source not found: /home/elf/elf_slam_ws/build/elf_slam/src/encoder_raw.c

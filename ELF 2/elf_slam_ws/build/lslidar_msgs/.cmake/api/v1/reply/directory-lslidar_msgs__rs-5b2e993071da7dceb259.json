@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "lslidar_msgs__rs",
+		"source" : "/home/elf/elf_slam_ws/build/lslidar_msgs/lslidar_msgs__rs"
+	}
+}

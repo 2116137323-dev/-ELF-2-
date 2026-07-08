@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="300dp"
+        android:layout_gravity="center_vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账号"
+        android:textSize="25sp"/>
+
+        <EditText
+            android:id="@+id/Account"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/us_2"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/longin_et_bg"
+            android:hint="请输入账号"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textSize="18sp" />
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密码"
+            android:textSize="25sp"/>
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:hint="请输入密码"
+            android:drawableLeft="@drawable/ps_2"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/longin_et_bg"/>
+    </LinearLayout>
+    <Button
+
+        android:layout_margin="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Login"
+        android:text="登录"
+        android:textSize="25sp">
+
+    </Button>
+    <EditText
+        android:id="@+id/CameraIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="请输入摄像头 IP (如: 192.168.72.123)"
+        android:inputType="textUri" />
+
+    <TextView
+        android:layout_margin="190dp"
+        android:id="@+id/textView4"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="19sp"
+        android:text="有疑问联系管理员：" />
+
+</LinearLayout>

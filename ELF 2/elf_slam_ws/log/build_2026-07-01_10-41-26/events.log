@@ -1,0 +1,69 @@
+[0.000000] (-) TimerEvent: {}
+[0.000241] (-) JobUnselected: {'identifier': 'YbImuLib'}
+[0.000446] (-) JobUnselected: {'identifier': 'imu_ros2_device'}
+[0.000469] (-) JobUnselected: {'identifier': 'lslidar_driver'}
+[0.000490] (-) JobUnselected: {'identifier': 'lslidar_msgs'}
+[0.009461] (elf_slam) JobQueued: {'identifier': 'elf_slam', 'dependencies': OrderedDict()}
+[0.009537] (elf_slam) JobStarted: {'identifier': 'elf_slam'}
+[0.099627] (-) TimerEvent: {}
+[0.200218] (-) TimerEvent: {}
+[0.300938] (-) TimerEvent: {}
+[0.401503] (-) TimerEvent: {}
+[0.502135] (-) TimerEvent: {}
+[0.602764] (-) TimerEvent: {}
+[0.703521] (-) TimerEvent: {}
+[0.804237] (-) TimerEvent: {}
+[0.904972] (-) TimerEvent: {}
+[1.005692] (-) TimerEvent: {}
+[1.106701] (-) TimerEvent: {}
+[1.158559] (elf_slam) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/elf/elf_slam_ws/build/elf_slam/build', '--no-deps', 'symlink_data'], 'cwd': '/home/elf/elf_slam_ws/build/elf_slam', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en', 'USER': 'elf', 'SSH_CLIENT': '192.168.72.118 50161 22', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/elf/elf_slam_ws/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/elf', 'MUTTER_DEBUG_ENABLE_ATOMIC_KMS': '0', 'OLDPWD': '/home/elf/elf_slam_ws', 'SSH_TTY': '/dev/pts/2', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'en_US.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/elf/elf_slam_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'elf', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-color', 'XDG_SESSION_ID': 'c8', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'letter', 'LC_ADDRESS': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'CLUTTER_PAINT': 'disable-dynamic-max-render-time', 'PROMPT_COMMAND': 'history -a;pwd > /tmp/955f8bddc8;', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'MUTTER_DEBUG_FORCE_KMS_MODE': 'simple', 'PWD': '/home/elf/elf_slam_ws/build/elf_slam', 'SSH_CONNECTION': '192.168.72.118 50161 192.168.72.163 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/elf/elf_slam_ws/build/elf_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'TZ': 'Asia/Shanghai', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs'}, 'shell': False}
+[1.206816] (-) TimerEvent: {}
+[1.307550] (-) TimerEvent: {}
+[1.408302] (-) TimerEvent: {}
+[1.509495] (-) TimerEvent: {}
+[1.585423] (elf_slam) StdoutLine: {'line': b'running develop\n'}
+[1.609490] (-) TimerEvent: {}
+[1.709816] (-) TimerEvent: {}
+[1.810248] (-) TimerEvent: {}
+[1.844293] (elf_slam) StdoutLine: {'line': b'running egg_info\n'}
+[1.844560] (elf_slam) StdoutLine: {'line': b'creating elf_slam.egg-info\n'}
+[1.844726] (elf_slam) StdoutLine: {'line': b'writing elf_slam.egg-info/PKG-INFO\n'}
+[1.845026] (elf_slam) StdoutLine: {'line': b'writing dependency_links to elf_slam.egg-info/dependency_links.txt\n'}
+[1.845196] (elf_slam) StdoutLine: {'line': b'writing entry points to elf_slam.egg-info/entry_points.txt\n'}
+[1.845356] (elf_slam) StdoutLine: {'line': b'writing requirements to elf_slam.egg-info/requires.txt\n'}
+[1.845494] (elf_slam) StdoutLine: {'line': b'writing top-level names to elf_slam.egg-info/top_level.txt\n'}
+[1.845626] (elf_slam) StdoutLine: {'line': b"writing manifest file 'elf_slam.egg-info/SOURCES.txt'\n"}
+[1.848489] (elf_slam) StdoutLine: {'line': b"reading manifest file 'elf_slam.egg-info/SOURCES.txt'\n"}
+[1.849360] (elf_slam) StdoutLine: {'line': b"writing manifest file 'elf_slam.egg-info/SOURCES.txt'\n"}
+[1.851457] (elf_slam) StdoutLine: {'line': b'running build_ext\n'}
+[1.851811] (elf_slam) StdoutLine: {'line': b'Creating /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf-slam.egg-link (link to .)\n'}
+[1.853007] (elf_slam) StdoutLine: {'line': b'Installing diff_drive_controller script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam\n'}
+[1.853325] (elf_slam) StdoutLine: {'line': b'Installing encoder_bridge script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam\n'}
+[1.856421] (elf_slam) StdoutLine: {'line': b'Installing scan_stamp_fix script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam\n'}
+[1.857198] (elf_slam) StdoutLine: {'line': b'\n'}
+[1.857551] (elf_slam) StdoutLine: {'line': b'Installed /home/elf/elf_slam_ws/build/elf_slam\n'}
+[1.857887] (elf_slam) StdoutLine: {'line': b'running symlink_data\n'}
+[1.858211] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/ament_index\n'}
+[1.858538] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/ament_index/resource_index\n'}
+[1.858867] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/ament_index/resource_index/packages\n'}
+[1.859261] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/resource/elf_slam -> /home/elf/elf_slam_ws/install/elf_slam/share/ament_index/resource_index/packages\n'}
+[1.859606] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/package.xml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam\n'}
+[1.859979] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch\n'}
+[1.860342] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/launch/online_async_nav_launch.py -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch\n'}
+[1.860673] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/launch/save_map_launch.py -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch\n'}
+[1.861038] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/launch/online_async_launch.py -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch\n'}
+[1.861372] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config\n'}
+[1.861699] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/config/nav2_params_online_slam.yaml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config\n'}
+[1.862030] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/config/diff_drive_params.yaml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config\n'}
+[1.862361] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/config/mapper_params_online_async.yaml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config\n'}
+[1.862713] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/config/nav2_online_slam.rviz -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config\n'}
+[1.863051] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/urdf\n'}
+[1.863489] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/urdf/elf_robot.urdf -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/urdf\n'}
+[1.864530] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/scripts\n'}
+[1.865033] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/scripts/start_rviz.sh -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/scripts\n'}
+[1.865515] (elf_slam) StdoutLine: {'line': b'symbolically linking /home/elf/elf_slam_ws/build/elf_slam/scripts/encoder_raw -> /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam\n'}
+[1.910771] (-) TimerEvent: {}
+[1.943108] (elf_slam) CommandEnded: {'returncode': 0}
+[2.010812] (elf_slam) JobEnded: {'identifier': 'elf_slam', 'rc': 0}
+[2.012409] (-) TimerEvent: {}
+[2.012669] (-) EventReactorShutdown: {}

@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<!-- ELF 履带救援车：长 37 cm × 宽 28 cm，+X 为车头（红色楔形前舱 + 前照灯） -->
+<robot name="elf">
+  <material name="chassis_orange">
+    <color rgba="0.92 0.45 0.12 1.0"/>
+  </material>
+  <material name="chassis_dark">
+    <color rgba="0.55 0.28 0.08 1.0"/>
+  </material>
+  <material name="front_red">
+    <color rgba="0.92 0.12 0.10 1.0"/>
+  </material>
+  <material name="front_light">
+    <color rgba="1.0 0.95 0.55 1.0"/>
+  </material>
+  <material name="rear_dark">
+    <color rgba="0.18 0.18 0.20 1.0"/>
+  </material>
+  <material name="rear_tail">
+    <color rgba="0.75 0.08 0.08 1.0"/>
+  </material>
+  <material name="track_black">
+    <color rgba="0.06 0.06 0.06 1.0"/>
+  </material>
+  <material name="track_ridge">
+    <color rgba="0.20 0.20 0.20 1.0"/>
+  </material>
+  <material name="roller_gray">
+    <color rgba="0.35 0.35 0.38 1.0"/>
+  </material>
+  <material name="arrow_white">
+    <color rgba="0.98 0.98 1.0 1.0"/>
+  </material>
+
+  <link name="base_footprint"/>
+
+  <!-- 底盘甲板（低位，承托履带与上层结构） -->
+  <link name="base_link">
+    <visual name="floor_pan">
+      <origin xyz="0 0 0.028" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.32 0.18 0.025"/>
+      </geometry>
+      <material name="chassis_dark"/>
+    </visual>
+    <collision name="footprint_box">
+      <origin xyz="0 0 0.06" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.37 0.28 0.12"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- 左履带（立体：外缘 + 内缘 + 负重轮） -->
+  <link name="left_track_link">
+    <visual name="left_track_outer">
+      <origin xyz="0 0.012 0.018" rpy="0 0 0"/>
+      <geometry><box size="0.34 0.024 0.036"/></geometry>
+      <material name="track_black"/>
+    </visual>
+    <visual name="left_track_inner">
+      <origin xyz="0 -0.008 0.018" rpy="0 0 0"/>
+      <geometry><box size="0.32 0.018 0.030"/></geometry>
+      <material name="track_ridge"/>
+    </visual>
+    <visual name="left_roller_front">
+      <origin xyz="0.145 0 0.018" rpy="1.5708 0 0"/>
+      <geometry><cylinder radius="0.022" length="0.038"/></geometry>
+      <material name="roller_gray"/>
+    </visual>
+    <visual name="left_roller_rear">
+      <origin xyz="-0.145 0 0.018" rpy="1.5708 0 0"/>
+      <geometry><cylinder radius="0.022" length="0.038"/></geometry>
+      <material name="roller_gray"/>
+    </visual>
+    <visual name="left_tread_1">
+      <origin xyz="-0.10 0.014 0.038" rpy="0 0 0"/>
+      <geometry><box size="0.035 0.018 0.010"/></geometry>
+      <material name="track_ridge"/>
+    </visual>
+    <visual name="left_tread_2">
+      <origin xyz="0.00 0.014 0.038" rpy="0 0 0"/>
+      <geometry><box size="0.035 0.018 0.010"/></geometry>
+      <material name="track_ridge"/>
+    </visual>
+    <visual name="left_tread_3">
+      <origin xyz="0.10 0.014 0.038" rpy="0 0 0"/>
+      <geometry><box size="0.035 0.018 0.010"/></geometry>
+      <material name="track_ridge"/>
+    </visual>
+  </link>
+
+  <!-- 右履带 -->
+  <link name="right_track_link">
+    <visual name="right_track_outer">
+      <origin xyz="0 -0.012 0.018" rpy="0 0 0"/>
+      <geometry><box size="0.34 0.024 0.036"/></geometry>
+      <material name="track_black"/>
+    </visual>
+    <visual name="right_track_inner">
+      <origin xyz="0 0.008 0.018" rpy="0 0 0"/>
+      <geometry><box size="0.32 0.018 0.030"/></geometry>
+      <material name="track_ridge"/>
+    </visual>
+    <visual name="right_roller_front">
+      <origin xyz="0.145 0 0.018" rpy="1.5708 0 0"/>
+      <geometry><cylinder radius="0.022" length="0.038"/></geometry>
+      <material name="roller_gray"/>
+    </visual>
+    <visual name="right_roller_rear">
+      <origin xyz="-0.145 0 0.018" rpy="1.5708 0 0"/>
+      <geometry><cylinder radius="0.022" length="0.038"/></geometry>
+      <material name="roller_gray"/>
+    </visual>
+    <visual name="right_tread_1">
+      <origin xyz="-0.10 -0.014 0.038" rpy="0 0 0"/>
+      <geometry><box size="0.035 0.018 0.010"/></geometry>
+      <material name="track_ridge"/>
+    </visual>
+    <visual name="right_tread_2">
+      <origin xyz="0.00 -0.014 0.038" rpy="0 0 0"/>
+      <geometry><box size="0.035 0.018 0.010"/></geometry>
+      <material name="track_ridge"/>
+    </visual>
+    <visual name="right_tread_3">
+      <origin xyz="0.10 -0.014 0.038" rpy="0 0 0"/>
+      <geometry><box size="0.035 0.018 0.010"/></geometry>
+      <material name="track_ridge"/>
+    </visual>
+  </link>
+
+  <!-- 前舱：红色楔形 + 前照灯（车头） -->
+  <link name="front_hood_link">
+    <visual name="hood_main">
+      <origin xyz="0.04 0 0.045" rpy="0 -0.28 0"/>
+      <geometry><box size="0.12 0.14 0.055"/></geometry>
+      <material name="front_red"/>
+    </visual>
+    <visual name="hood_nose">
+      <origin xyz="0.11 0 0.028" rpy="0 -0.55 0"/>
+      <geometry><box size="0.10 0.12 0.040"/></geometry>
+      <material name="front_red"/>
+    </visual>
+    <visual name="hood_tip">
+      <origin xyz="0.155 0 0.018" rpy="0 -0.75 0"/>
+      <geometry><box size="0.06 0.10 0.028"/></geometry>
+      <material name="front_red"/>
+    </visual>
+    <visual name="headlight_left">
+      <origin xyz="0.165 0.07 0.048" rpy="1.5708 0 0"/>
+      <geometry><cylinder radius="0.018" length="0.012"/></geometry>
+      <material name="front_light"/>
+    </visual>
+    <visual name="headlight_right">
+      <origin xyz="0.165 -0.07 0.048" rpy="1.5708 0 0"/>
+      <geometry><cylinder radius="0.018" length="0.012"/></geometry>
+      <material name="front_light"/>
+    </visual>
+    <visual name="front_arrow_shaft">
+      <origin xyz="0.02 0 0.082" rpy="0 0 0"/>
+      <geometry><box size="0.06 0.018 0.012"/></geometry>
+      <material name="arrow_white"/>
+    </visual>
+    <visual name="front_arrow_head">
+      <origin xyz="0.055 0 0.082" rpy="0 0 0.785"/>
+      <geometry><box size="0.035 0.035 0.012"/></geometry>
+      <material name="arrow_white"/>
+    </visual>
+  </link>
+
+  <!-- 中后段舱体（橙色，比前舱高） -->
+  <link name="cabin_link">
+    <visual name="cabin_lower">
+      <origin xyz="-0.02 0 0.075" rpy="0 0 0"/>
+      <geometry><box size="0.18 0.15 0.06"/></geometry>
+      <material name="chassis_orange"/>
+    </visual>
+    <visual name="cabin_upper">
+      <origin xyz="-0.04 0 0.115" rpy="0 0 0"/>
+      <geometry><box size="0.14 0.13 0.05"/></geometry>
+      <material name="chassis_orange"/>
+    </visual>
+    <visual name="cabin_roof">
+      <origin xyz="-0.05 0 0.145" rpy="0 0 0"/>
+      <geometry><box size="0.12 0.11 0.015"/></geometry>
+      <material name="chassis_dark"/>
+    </visual>
+  </link>
+
+  <!-- 后段：深色平台 + 尾灯 + 天线（车尾） -->
+  <link name="rear_deck_link">
+    <visual name="rear_platform">
+      <origin xyz="0 0 0.055" rpy="0 0.15 0"/>
+      <geometry><box size="0.10 0.14 0.035"/></geometry>
+      <material name="rear_dark"/>
+    </visual>
+    <visual name="rear_hatch">
+      <origin xyz="-0.02 0 0.078" rpy="0 0.10 0"/>
+      <geometry><box size="0.06 0.10 0.020"/></geometry>
+      <material name="rear_dark"/>
+    </visual>
+    <visual name="taillight_left">
+      <origin xyz="-0.04 0.07 0.062" rpy="1.5708 0 0"/>
+      <geometry><cylinder radius="0.012" length="0.010"/></geometry>
+      <material name="rear_tail"/>
+    </visual>
+    <visual name="taillight_right">
+      <origin xyz="-0.04 -0.07 0.062" rpy="1.5708 0 0"/>
+      <geometry><cylinder radius="0.012" length="0.010"/></geometry>
+      <material name="rear_tail"/>
+    </visual>
+    <visual name="rear_antenna_base">
+      <origin xyz="-0.05 0 0.090" rpy="0 0 0"/>
+      <geometry><cylinder radius="0.010" length="0.025"/></geometry>
+      <material name="rear_dark"/>
+    </visual>
+    <visual name="rear_antenna_mast">
+      <origin xyz="-0.05 0 0.125" rpy="0 0 0"/>
+      <geometry><cylinder radius="0.004" length="0.050"/></geometry>
+      <material name="rear_dark"/>
+    </visual>
+    <visual name="rear_label_bar">
+      <origin xyz="-0.055 0 0.070" rpy="0 0 0"/>
+      <geometry><box size="0.008 0.08 0.025"/></geometry>
+      <material name="rear_tail"/>
+    </visual>
+  </link>
+
+  <joint name="base_footprint_to_base_link" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="base_to_left_track" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_track_link"/>
+    <origin xyz="0 0.103 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="base_to_right_track" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_track_link"/>
+    <origin xyz="0 -0.103 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="base_to_front_hood" type="fixed">
+    <parent link="base_link"/>
+    <child link="front_hood_link"/>
+    <origin xyz="0.04 0 0.042" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="base_to_cabin" type="fixed">
+    <parent link="base_link"/>
+    <child link="cabin_link"/>
+    <origin xyz="0 0 0.042" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="base_to_rear_deck" type="fixed">
+    <parent link="base_link"/>
+    <child link="rear_deck_link"/>
+    <origin xyz="-0.125 0 0.042" rpy="0 0 0"/>
+  </joint>
+</robot>

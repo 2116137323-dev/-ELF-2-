@@ -1,0 +1,16 @@
+diff_drive_controller:
+  ros__parameters:
+    device_path: /dev/my_serial
+    enable_motor: true
+    max_vel_x: 0.4
+    max_vel_theta: 1.2
+    linear_deadzone: 0.01
+    angular_deadzone: 0.05
+    turn_bias: 0.45
+    turn_duty: 40
+    min_duty: 20
+    max_duty: 30
+    control_rate_hz: 8.0
+    min_write_interval_sec: 0.11
+    stop_repeat: 1
+    stop_hold_sec: 0.35

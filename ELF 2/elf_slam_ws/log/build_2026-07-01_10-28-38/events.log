@@ -1,0 +1,1195 @@
+[0.000000] (-) TimerEvent: {}
+[0.001244] (YbImuLib) JobQueued: {'identifier': 'YbImuLib', 'dependencies': OrderedDict()}
+[0.001747] (elf_slam) JobQueued: {'identifier': 'elf_slam', 'dependencies': OrderedDict()}
+[0.001854] (lslidar_msgs) JobQueued: {'identifier': 'lslidar_msgs', 'dependencies': OrderedDict()}
+[0.002123] (imu_ros2_device) JobQueued: {'identifier': 'imu_ros2_device', 'dependencies': OrderedDict([('YbImuLib', '/home/elf/elf_slam_ws/install/YbImuLib')])}
+[0.002236] (lslidar_driver) JobQueued: {'identifier': 'lslidar_driver', 'dependencies': OrderedDict([('lslidar_msgs', '/home/elf/elf_slam_ws/install/lslidar_msgs')])}
+[0.002545] (YbImuLib) JobStarted: {'identifier': 'YbImuLib'}
+[0.010084] (lslidar_msgs) JobStarted: {'identifier': 'lslidar_msgs'}
+[0.017878] (elf_slam) JobStarted: {'identifier': 'elf_slam'}
+[0.099149] (-) TimerEvent: {}
+[0.200138] (-) TimerEvent: {}
+[0.301157] (-) TimerEvent: {}
+[0.402094] (-) TimerEvent: {}
+[0.465837] (lslidar_msgs) JobProgress: {'identifier': 'lslidar_msgs', 'progress': 'cmake'}
+[0.466486] (lslidar_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/elf/elf_slam_ws/src/lslidar_msgs', '-DCMAKE_INSTALL_PREFIX=/home/elf/elf_slam_ws/install/lslidar_msgs'], 'cwd': '/home/elf/elf_slam_ws/build/lslidar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en'), ('USER', 'elf'), ('SSH_CLIENT', '192.168.72.118 61810 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/elf'), ('MUTTER_DEBUG_ENABLE_ATOMIC_KMS', '0'), ('OLDPWD', '/home/elf/elf_slam_ws'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'en_US.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/elf/elf_slam_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'elf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-color'), ('XDG_SESSION_ID', 'c10'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'letter'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('CLUTTER_PAINT', 'disable-dynamic-max-render-time'), ('PROMPT_COMMAND', 'history -a;pwd > /tmp/5255c8ce4e;'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('MUTTER_DEBUG_FORCE_KMS_MODE', 'simple'), ('PWD', '/home/elf/elf_slam_ws/build/lslidar_msgs'), ('SSH_CONNECTION', '192.168.72.118 61810 192.168.72.163 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('TZ', 'Asia/Shanghai'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble')]), 'shell': False}
+[0.502245] (-) TimerEvent: {}
+[0.602851] (-) TimerEvent: {}
+[0.641606] (lslidar_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.702999] (-) TimerEvent: {}
+[0.803595] (-) TimerEvent: {}
+[0.883013] (lslidar_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.898646] (lslidar_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.903733] (-) TimerEvent: {}
+[1.004416] (-) TimerEvent: {}
+[1.065301] (lslidar_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.075554] (lslidar_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.078573] (lslidar_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.079328] (lslidar_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.083578] (lslidar_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.086084] (YbImuLib) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/YbImuLib', 'build', '--build-base', '/home/elf/elf_slam_ws/build/YbImuLib/build', 'install', '--record', '/home/elf/elf_slam_ws/build/YbImuLib/install.log', '--single-version-externally-managed'], 'cwd': '/home/elf/elf_slam_ws/src/YbImuLib', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en', 'USER': 'elf', 'SSH_CLIENT': '192.168.72.118 61810 22', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/elf/elf_slam_ws/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/elf', 'MUTTER_DEBUG_ENABLE_ATOMIC_KMS': '0', 'OLDPWD': '/home/elf/elf_slam_ws', 'SSH_TTY': '/dev/pts/2', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'en_US.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/elf/elf_slam_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'elf', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-color', 'XDG_SESSION_ID': 'c10', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'letter', 'LC_ADDRESS': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'CLUTTER_PAINT': 'disable-dynamic-max-render-time', 'PROMPT_COMMAND': 'history -a;pwd > /tmp/5255c8ce4e;', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'MUTTER_DEBUG_FORCE_KMS_MODE': 'simple', 'PWD': '/home/elf/elf_slam_ws/build/YbImuLib', 'SSH_CONNECTION': '192.168.72.118 61810 192.168.72.163 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/elf/elf_slam_ws/build/YbImuLib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'TZ': 'Asia/Shanghai', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs'}, 'shell': False}
+[1.104578] (-) TimerEvent: {}
+[1.205417] (-) TimerEvent: {}
+[1.296544] (lslidar_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.305562] (-) TimerEvent: {}
+[1.335963] (lslidar_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.336963] (lslidar_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.339109] (lslidar_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.346674] (lslidar_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.405789] (-) TimerEvent: {}
+[1.478441] (YbImuLib) StdoutLine: {'line': b'running egg_info\n'}
+[1.479521] (YbImuLib) StdoutLine: {'line': b'creating ../../build/YbImuLib/YbImuLib.egg-info\n'}
+[1.480010] (YbImuLib) StdoutLine: {'line': b'writing ../../build/YbImuLib/YbImuLib.egg-info/PKG-INFO\n'}
+[1.480312] (YbImuLib) StdoutLine: {'line': b'writing dependency_links to ../../build/YbImuLib/YbImuLib.egg-info/dependency_links.txt\n'}
+[1.480506] (YbImuLib) StdoutLine: {'line': b'writing top-level names to ../../build/YbImuLib/YbImuLib.egg-info/top_level.txt\n'}
+[1.480901] (YbImuLib) StdoutLine: {'line': b"writing manifest file '../../build/YbImuLib/YbImuLib.egg-info/SOURCES.txt'\n"}
+[1.484064] (YbImuLib) StdoutLine: {'line': b"reading manifest file '../../build/YbImuLib/YbImuLib.egg-info/SOURCES.txt'\n"}
+[1.485039] (YbImuLib) StdoutLine: {'line': b"writing manifest file '../../build/YbImuLib/YbImuLib.egg-info/SOURCES.txt'\n"}
+[1.485556] (YbImuLib) StdoutLine: {'line': b'running build\n'}
+[1.485699] (YbImuLib) StdoutLine: {'line': b'running build_py\n'}
+[1.485790] (YbImuLib) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/build/YbImuLib/build\n'}
+[1.485887] (YbImuLib) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/build/YbImuLib/build/lib\n'}
+[1.485953] (YbImuLib) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib\n'}
+[1.486015] (YbImuLib) StdoutLine: {'line': b'copying YbImuLib/YbImuSerialLib.py -> /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib\n'}
+[1.486077] (YbImuLib) StdoutLine: {'line': b'copying YbImuLib/__init__.py -> /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib\n'}
+[1.486159] (YbImuLib) StdoutLine: {'line': b'copying YbImuLib/YbImuI2cLib.py -> /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib\n'}
+[1.486223] (YbImuLib) StdoutLine: {'line': b'running install\n'}
+[1.486823] (YbImuLib) StdoutLine: {'line': b'running install_lib\n'}
+[1.488429] (YbImuLib) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib\n'}
+[1.488905] (YbImuLib) StdoutLine: {'line': b'copying /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib/YbImuSerialLib.py -> /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib\n'}
+[1.489314] (YbImuLib) StdoutLine: {'line': b'copying /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib/__init__.py -> /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib\n'}
+[1.489699] (YbImuLib) StdoutLine: {'line': b'copying /home/elf/elf_slam_ws/build/YbImuLib/build/lib/YbImuLib/YbImuI2cLib.py -> /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib\n'}
+[1.490028] (YbImuLib) StdoutLine: {'line': b'byte-compiling /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib/YbImuSerialLib.py to YbImuSerialLib.cpython-310.pyc\n'}
+[1.493732] (YbImuLib) StdoutLine: {'line': b'byte-compiling /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib/__init__.py to __init__.cpython-310.pyc\n'}
+[1.494335] (YbImuLib) StdoutLine: {'line': b'byte-compiling /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib/YbImuI2cLib.py to YbImuI2cLib.cpython-310.pyc\n'}
+[1.496407] (YbImuLib) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.499589] (YbImuLib) StdoutLine: {'line': b'Copying ../../build/YbImuLib/YbImuLib.egg-info to /home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages/YbImuLib-1.0.0-py3.10.egg-info\n'}
+[1.500205] (YbImuLib) StdoutLine: {'line': b'running install_scripts\n'}
+[1.505889] (-) TimerEvent: {}
+[1.531543] (YbImuLib) StdoutLine: {'line': b"writing list of installed files to '/home/elf/elf_slam_ws/build/YbImuLib/install.log'\n"}
+[1.569284] (elf_slam) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/elf_slam', 'build', '--build-base', '/home/elf/elf_slam_ws/build/elf_slam/build', 'install', '--record', '/home/elf/elf_slam_ws/build/elf_slam/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/elf/elf_slam_ws/src/elf_slam', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en', 'USER': 'elf', 'SSH_CLIENT': '192.168.72.118 61810 22', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/elf/elf_slam_ws/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/elf', 'MUTTER_DEBUG_ENABLE_ATOMIC_KMS': '0', 'OLDPWD': '/home/elf/elf_slam_ws', 'SSH_TTY': '/dev/pts/2', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'en_US.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/elf/elf_slam_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'elf', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-color', 'XDG_SESSION_ID': 'c10', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'letter', 'LC_ADDRESS': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'CLUTTER_PAINT': 'disable-dynamic-max-render-time', 'PROMPT_COMMAND': 'history -a;pwd > /tmp/5255c8ce4e;', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'MUTTER_DEBUG_FORCE_KMS_MODE': 'simple', 'PWD': '/home/elf/elf_slam_ws/build/elf_slam', 'SSH_CONNECTION': '192.168.72.118 61810 192.168.72.163 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/elf/elf_slam_ws/build/elf_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'TZ': 'Asia/Shanghai', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs'}, 'shell': False}
+[1.599507] (YbImuLib) CommandEnded: {'returncode': 0}
+[1.606860] (-) TimerEvent: {}
+[1.615746] (YbImuLib) JobEnded: {'identifier': 'YbImuLib', 'rc': 0}
+[1.621222] (imu_ros2_device) JobStarted: {'identifier': 'imu_ros2_device'}
+[1.682786] (lslidar_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.706963] (-) TimerEvent: {}
+[1.807372] (-) TimerEvent: {}
+[1.902929] (lslidar_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[1.907472] (-) TimerEvent: {}
+[1.948823] (elf_slam) StdoutLine: {'line': b'running egg_info\n'}
+[1.950169] (elf_slam) StdoutLine: {'line': b'creating ../../build/elf_slam/elf_slam.egg-info\n'}
+[1.950644] (lslidar_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.951068] (elf_slam) StdoutLine: {'line': b'writing ../../build/elf_slam/elf_slam.egg-info/PKG-INFO\n'}
+[1.951422] (elf_slam) StdoutLine: {'line': b'writing dependency_links to ../../build/elf_slam/elf_slam.egg-info/dependency_links.txt\n'}
+[1.951894] (elf_slam) StdoutLine: {'line': b'writing entry points to ../../build/elf_slam/elf_slam.egg-info/entry_points.txt\n'}
+[1.952218] (elf_slam) StdoutLine: {'line': b'writing requirements to ../../build/elf_slam/elf_slam.egg-info/requires.txt\n'}
+[1.952601] (elf_slam) StdoutLine: {'line': b'writing top-level names to ../../build/elf_slam/elf_slam.egg-info/top_level.txt\n'}
+[1.952996] (elf_slam) StdoutLine: {'line': b"writing manifest file '../../build/elf_slam/elf_slam.egg-info/SOURCES.txt'\n"}
+[1.957107] (elf_slam) StdoutLine: {'line': b"reading manifest file '../../build/elf_slam/elf_slam.egg-info/SOURCES.txt'\n"}
+[1.958314] (lslidar_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.958628] (elf_slam) StdoutLine: {'line': b"writing manifest file '../../build/elf_slam/elf_slam.egg-info/SOURCES.txt'\n"}
+[1.958818] (elf_slam) StdoutLine: {'line': b'running build\n'}
+[1.958898] (elf_slam) StdoutLine: {'line': b'running build_py\n'}
+[1.959355] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/build/elf_slam/build\n'}
+[1.959510] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/build/elf_slam/build/lib\n'}
+[1.959592] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam\n'}
+[1.959663] (elf_slam) StdoutLine: {'line': b'copying elf_slam/encoder_bridge.py -> /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam\n'}
+[1.959734] (elf_slam) StdoutLine: {'line': b'copying elf_slam/scan_stamp_fix.py -> /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam\n'}
+[1.959880] (elf_slam) StdoutLine: {'line': b'copying elf_slam/__init__.py -> /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam\n'}
+[1.960018] (elf_slam) StdoutLine: {'line': b'copying elf_slam/diff_drive_controller.py -> /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam\n'}
+[1.960150] (elf_slam) StdoutLine: {'line': b'running install\n'}
+[1.960874] (elf_slam) StdoutLine: {'line': b'running install_lib\n'}
+[1.962693] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam\n'}
+[1.962831] (elf_slam) StdoutLine: {'line': b'copying /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam/encoder_bridge.py -> /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam\n'}
+[1.962945] (elf_slam) StdoutLine: {'line': b'copying /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam/scan_stamp_fix.py -> /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam\n'}
+[1.963073] (elf_slam) StdoutLine: {'line': b'copying /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam/__init__.py -> /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam\n'}
+[1.963199] (elf_slam) StdoutLine: {'line': b'copying /home/elf/elf_slam_ws/build/elf_slam/build/lib/elf_slam/diff_drive_controller.py -> /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam\n'}
+[1.964028] (elf_slam) StdoutLine: {'line': b'byte-compiling /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam/encoder_bridge.py to encoder_bridge.cpython-310.pyc\n'}
+[1.966341] (elf_slam) StdoutLine: {'line': b'byte-compiling /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam/scan_stamp_fix.py to scan_stamp_fix.cpython-310.pyc\n'}
+[1.967868] (elf_slam) StdoutLine: {'line': b'byte-compiling /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam/__init__.py to __init__.cpython-310.pyc\n'}
+[1.968073] (elf_slam) StdoutLine: {'line': b'byte-compiling /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam/diff_drive_controller.py to diff_drive_controller.cpython-310.pyc\n'}
+[1.969975] (elf_slam) StdoutLine: {'line': b'running install_data\n'}
+[1.970175] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/ament_index\n'}
+[1.970338] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/ament_index/resource_index\n'}
+[1.970412] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/ament_index/resource_index/packages\n'}
+[1.970538] (elf_slam) StdoutLine: {'line': b'copying resource/elf_slam -> /home/elf/elf_slam_ws/install/elf_slam/share/ament_index/resource_index/packages\n'}
+[1.970684] (elf_slam) StdoutLine: {'line': b'copying package.xml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam\n'}
+[1.970756] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch\n'}
+[1.971000] (elf_slam) StdoutLine: {'line': b'copying launch/online_async_nav_launch.py -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch\n'}
+[1.971204] (lslidar_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.971432] (elf_slam) StdoutLine: {'line': b'copying launch/save_map_launch.py -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch\n'}
+[1.971511] (elf_slam) StdoutLine: {'line': b'copying launch/online_async_launch.py -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/launch\n'}
+[1.971580] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config\n'}
+[1.971646] (elf_slam) StdoutLine: {'line': b'copying config/nav2_params_online_slam.yaml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config\n'}
+[1.971713] (elf_slam) StdoutLine: {'line': b'copying config/diff_drive_params.yaml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config\n'}
+[1.971779] (elf_slam) StdoutLine: {'line': b'copying config/mapper_params_online_async.yaml -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config\n'}
+[1.971844] (elf_slam) StdoutLine: {'line': b'copying config/nav2_online_slam.rviz -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/config\n'}
+[1.971960] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/urdf\n'}
+[1.972148] (elf_slam) StdoutLine: {'line': b'copying urdf/elf_robot.urdf -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/urdf\n'}
+[1.972215] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/scripts\n'}
+[1.972292] (elf_slam) StdoutLine: {'line': b'copying scripts/start_rviz.sh -> /home/elf/elf_slam_ws/install/elf_slam/share/elf_slam/scripts\n'}
+[1.972355] (elf_slam) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam\n'}
+[1.972415] (elf_slam) StdoutLine: {'line': b'copying scripts/encoder_raw -> /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam\n'}
+[1.972476] (elf_slam) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.976555] (elf_slam) StdoutLine: {'line': b'Copying ../../build/elf_slam/elf_slam.egg-info to /home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages/elf_slam-0.0.0-py3.10.egg-info\n'}
+[1.977467] (elf_slam) StdoutLine: {'line': b'running install_scripts\n'}
+[1.990401] (lslidar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.007808] (-) TimerEvent: {}
+[2.016977] (lslidar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.023012] (elf_slam) StdoutLine: {'line': b'Installing diff_drive_controller script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam\n'}
+[2.023432] (elf_slam) StdoutLine: {'line': b'Installing encoder_bridge script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam\n'}
+[2.023657] (elf_slam) StdoutLine: {'line': b'Installing scan_stamp_fix script to /home/elf/elf_slam_ws/install/elf_slam/lib/elf_slam\n'}
+[2.024186] (elf_slam) StdoutLine: {'line': b"writing list of installed files to '/home/elf/elf_slam_ws/build/elf_slam/install.log'\n"}
+[2.062308] (lslidar_msgs) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[2.107914] (-) TimerEvent: {}
+[2.109807] (lslidar_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[2.112978] (elf_slam) CommandEnded: {'returncode': 0}
+[2.119942] (elf_slam) JobEnded: {'identifier': 'elf_slam', 'rc': 0}
+[2.126332] (lslidar_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.208047] (-) TimerEvent: {}
+[2.308589] (-) TimerEvent: {}
+[2.409112] (-) TimerEvent: {}
+[2.509631] (-) TimerEvent: {}
+[2.610171] (-) TimerEvent: {}
+[2.710718] (-) TimerEvent: {}
+[2.801736] (imu_ros2_device) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/imu_ros2_device', 'build', '--build-base', '/home/elf/elf_slam_ws/build/imu_ros2_device/build', 'install', '--record', '/home/elf/elf_slam_ws/build/imu_ros2_device/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/elf/elf_slam_ws/src/imu_ros2_device', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en', 'USER': 'elf', 'SSH_CLIENT': '192.168.72.118 61810 22', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/elf/elf_slam_ws/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/elf', 'MUTTER_DEBUG_ENABLE_ATOMIC_KMS': '0', 'OLDPWD': '/home/elf/elf_slam_ws', 'SSH_TTY': '/dev/pts/2', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'en_US.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/elf/elf_slam_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'elf', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-color', 'XDG_SESSION_ID': 'c10', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'letter', 'LC_ADDRESS': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'CLUTTER_PAINT': 'disable-dynamic-max-render-time', 'PROMPT_COMMAND': 'history -a;pwd > /tmp/5255c8ce4e;', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'MUTTER_DEBUG_FORCE_KMS_MODE': 'simple', 'PWD': '/home/elf/elf_slam_ws/build/imu_ros2_device', 'SSH_CONNECTION': '192.168.72.118 61810 192.168.72.163 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/elf/elf_slam_ws/build/imu_ros2_device/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'TZ': 'Asia/Shanghai', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs'}, 'shell': False}
+[2.810815] (-) TimerEvent: {}
+[2.814666] (lslidar_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.911106] (-) TimerEvent: {}
+[3.012027] (-) TimerEvent: {}
+[3.113085] (-) TimerEvent: {}
+[3.178555] (imu_ros2_device) StdoutLine: {'line': b'running egg_info\n'}
+[3.179931] (imu_ros2_device) StdoutLine: {'line': b'creating ../../build/imu_ros2_device/imu_ros2_device.egg-info\n'}
+[3.180551] (imu_ros2_device) StdoutLine: {'line': b'writing ../../build/imu_ros2_device/imu_ros2_device.egg-info/PKG-INFO\n'}
+[3.181029] (imu_ros2_device) StdoutLine: {'line': b'writing dependency_links to ../../build/imu_ros2_device/imu_ros2_device.egg-info/dependency_links.txt\n'}
+[3.181753] (imu_ros2_device) StdoutLine: {'line': b'writing entry points to ../../build/imu_ros2_device/imu_ros2_device.egg-info/entry_points.txt\n'}
+[3.182002] (imu_ros2_device) StdoutLine: {'line': b'writing requirements to ../../build/imu_ros2_device/imu_ros2_device.egg-info/requires.txt\n'}
+[3.182200] (imu_ros2_device) StdoutLine: {'line': b'writing top-level names to ../../build/imu_ros2_device/imu_ros2_device.egg-info/top_level.txt\n'}
+[3.182373] (imu_ros2_device) StdoutLine: {'line': b"writing manifest file '../../build/imu_ros2_device/imu_ros2_device.egg-info/SOURCES.txt'\n"}
+[3.186134] (imu_ros2_device) StdoutLine: {'line': b"reading manifest file '../../build/imu_ros2_device/imu_ros2_device.egg-info/SOURCES.txt'\n"}
+[3.187242] (imu_ros2_device) StdoutLine: {'line': b"writing manifest file '../../build/imu_ros2_device/imu_ros2_device.egg-info/SOURCES.txt'\n"}
+[3.187389] (imu_ros2_device) StdoutLine: {'line': b'running build\n'}
+[3.187520] (imu_ros2_device) StdoutLine: {'line': b'running build_py\n'}
+[3.187741] (imu_ros2_device) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/build/imu_ros2_device/build\n'}
+[3.187868] (imu_ros2_device) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib\n'}
+[3.187995] (imu_ros2_device) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device\n'}
+[3.188160] (imu_ros2_device) StdoutLine: {'line': b'copying imu_ros2_device/ybimu_driver.py -> /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device\n'}
+[3.188230] (imu_ros2_device) StdoutLine: {'line': b'copying imu_ros2_device/__init__.py -> /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device\n'}
+[3.188403] (imu_ros2_device) StdoutLine: {'line': b'running install\n'}
+[3.189042] (imu_ros2_device) StdoutLine: {'line': b'running install_lib\n'}
+[3.190502] (imu_ros2_device) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device\n'}
+[3.190625] (imu_ros2_device) StdoutLine: {'line': b'copying /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device/ybimu_driver.py -> /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device\n'}
+[3.190881] (imu_ros2_device) StdoutLine: {'line': b'copying /home/elf/elf_slam_ws/build/imu_ros2_device/build/lib/imu_ros2_device/__init__.py -> /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device\n'}
+[3.191786] (imu_ros2_device) StdoutLine: {'line': b'byte-compiling /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device/ybimu_driver.py to ybimu_driver.cpython-310.pyc\n'}
+[3.193521] (imu_ros2_device) StdoutLine: {'line': b'byte-compiling /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device/__init__.py to __init__.cpython-310.pyc\n'}
+[3.194074] (imu_ros2_device) StdoutLine: {'line': b'running install_data\n'}
+[3.194583] (imu_ros2_device) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index\n'}
+[3.195048] (imu_ros2_device) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index/resource_index\n'}
+[3.195410] (imu_ros2_device) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index/resource_index/packages\n'}
+[3.195753] (imu_ros2_device) StdoutLine: {'line': b'copying resource/imu_ros2_device -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/ament_index/resource_index/packages\n'}
+[3.196099] (imu_ros2_device) StdoutLine: {'line': b'copying package.xml -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device\n'}
+[3.196431] (imu_ros2_device) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/launch\n'}
+[3.196763] (imu_ros2_device) StdoutLine: {'line': b'copying launch/ybimu_display.launch.py -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/launch\n'}
+[3.197094] (imu_ros2_device) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/rviz\n'}
+[3.197455] (imu_ros2_device) StdoutLine: {'line': b'copying rviz/ybimu.rviz -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/rviz\n'}
+[3.197830] (imu_ros2_device) StdoutLine: {'line': b'creating /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/config\n'}
+[3.198167] (imu_ros2_device) StdoutLine: {'line': b'copying config/imu_filter_param.yaml -> /home/elf/elf_slam_ws/install/imu_ros2_device/share/imu_ros2_device/config\n'}
+[3.198498] (imu_ros2_device) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.199648] (imu_ros2_device) StdoutLine: {'line': b'Copying ../../build/imu_ros2_device/imu_ros2_device.egg-info to /home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages/imu_ros2_device-0.0.1-py3.10.egg-info\n'}
+[3.200769] (imu_ros2_device) StdoutLine: {'line': b'running install_scripts\n'}
+[3.213288] (-) TimerEvent: {}
+[3.245479] (imu_ros2_device) StdoutLine: {'line': b'Installing ybimu_driver script to /home/elf/elf_slam_ws/install/imu_ros2_device/lib/imu_ros2_device\n'}
+[3.246327] (imu_ros2_device) StdoutLine: {'line': b"writing list of installed files to '/home/elf/elf_slam_ws/build/imu_ros2_device/install.log'\n"}
+[3.313529] (-) TimerEvent: {}
+[3.336171] (imu_ros2_device) CommandEnded: {'returncode': 0}
+[3.358672] (imu_ros2_device) JobEnded: {'identifier': 'imu_ros2_device', 'rc': 0}
+[3.413665] (-) TimerEvent: {}
+[3.514471] (-) TimerEvent: {}
+[3.592395] (lslidar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.614716] (-) TimerEvent: {}
+[3.715617] (-) TimerEvent: {}
+[3.816471] (-) TimerEvent: {}
+[3.884862] (lslidar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.916703] (-) TimerEvent: {}
+[3.958970] (lslidar_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.964103] (lslidar_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[4.016933] (-) TimerEvent: {}
+[4.047405] (lslidar_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[4.048357] (lslidar_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[4.048710] (lslidar_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[4.049054] (lslidar_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[4.087041] (lslidar_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[4.117141] (-) TimerEvent: {}
+[4.218114] (-) TimerEvent: {}
+[4.319156] (-) TimerEvent: {}
+[4.333539] (lslidar_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[4.339330] (lslidar_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.339744] (lslidar_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.346503] (lslidar_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.399558] (lslidar_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[4.416995] (lslidar_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/elf/elf_slam_ws/build/lslidar_msgs\n'}
+[4.419238] (-) TimerEvent: {}
+[4.452052] (lslidar_msgs) CommandEnded: {'returncode': 0}
+[4.454833] (lslidar_msgs) JobProgress: {'identifier': 'lslidar_msgs', 'progress': 'build'}
+[4.459671] (lslidar_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/elf/elf_slam_ws/build/lslidar_msgs', '--', '-j8', '-l8'], 'cwd': '/home/elf/elf_slam_ws/build/lslidar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en'), ('USER', 'elf'), ('SSH_CLIENT', '192.168.72.118 61810 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/elf'), ('MUTTER_DEBUG_ENABLE_ATOMIC_KMS', '0'), ('OLDPWD', '/home/elf/elf_slam_ws'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'en_US.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/elf/elf_slam_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'elf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-color'), ('XDG_SESSION_ID', 'c10'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'letter'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('CLUTTER_PAINT', 'disable-dynamic-max-render-time'), ('PROMPT_COMMAND', 'history -a;pwd > /tmp/5255c8ce4e;'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('MUTTER_DEBUG_FORCE_KMS_MODE', 'simple'), ('PWD', '/home/elf/elf_slam_ws/build/lslidar_msgs'), ('SSH_CONNECTION', '192.168.72.118 61810 192.168.72.163 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('TZ', 'Asia/Shanghai'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble')]), 'shell': False}
+[4.519603] (-) TimerEvent: {}
+[4.551757] (lslidar_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[4.567201] (lslidar_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[4.588402] (lslidar_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[4.597113] (lslidar_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_lslidar_msgs\n'}
+[4.619743] (-) TimerEvent: {}
+[4.720362] (-) TimerEvent: {}
+[4.821052] (-) TimerEvent: {}
+[4.921803] (-) TimerEvent: {}
+[5.003265] (lslidar_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[5.007477] (lslidar_msgs) StdoutLine: {'line': b'creating lslidar_msgs.egg-info\n'}
+[5.008306] (lslidar_msgs) StdoutLine: {'line': b'writing lslidar_msgs.egg-info/PKG-INFO\n'}
+[5.008979] (lslidar_msgs) StdoutLine: {'line': b'writing dependency_links to lslidar_msgs.egg-info/dependency_links.txt\n'}
+[5.009374] (lslidar_msgs) StdoutLine: {'line': b'writing top-level names to lslidar_msgs.egg-info/top_level.txt\n'}
+[5.009701] (lslidar_msgs) StdoutLine: {'line': b"writing manifest file 'lslidar_msgs.egg-info/SOURCES.txt'\n"}
+[5.013925] (lslidar_msgs) StdoutLine: {'line': b"reading manifest file 'lslidar_msgs.egg-info/SOURCES.txt'\n"}
+[5.015212] (lslidar_msgs) StdoutLine: {'line': b"writing manifest file 'lslidar_msgs.egg-info/SOURCES.txt'\n"}
+[5.022085] (-) TimerEvent: {}
+[5.110121] (lslidar_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_lslidar_msgs_egg\n'}
+[5.122236] (-) TimerEvent: {}
+[5.153231] (lslidar_msgs) StdoutLine: {'line': b'[  4%] Built target lslidar_msgs__rs\n'}
+[5.222353] (-) TimerEvent: {}
+[5.322907] (-) TimerEvent: {}
+[5.412190] (lslidar_msgs) StdoutLine: {'line': b'[  4%] Built target lslidar_msgs__cpp\n'}
+[5.423025] (-) TimerEvent: {}
+[5.423385] (lslidar_msgs) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.432379] (lslidar_msgs) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[5.466626] (lslidar_msgs) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.522317] (lslidar_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_generator_c.dir/rosidl_generator_c/lslidar_msgs/msg/detail/lslidar_point__functions.c.o\x1b[0m\n'}
+[5.522908] (lslidar_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_generator_c.dir/rosidl_generator_c/lslidar_msgs/msg/detail/lslidar_sweep__functions.c.o\x1b[0m\n'}
+[5.523315] (-) TimerEvent: {}
+[5.529610] (lslidar_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_generator_c.dir/rosidl_generator_c/lslidar_msgs/msg/detail/lslidar_scan__functions.c.o\x1b[0m\n'}
+[5.530353] (lslidar_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_generator_c.dir/rosidl_generator_c/lslidar_msgs/msg/detail/lslidar_packet__functions.c.o\x1b[0m\n'}
+[5.531116] (lslidar_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_generator_c.dir/rosidl_generator_c/lslidar_msgs/msg/detail/lslidar_difop__functions.c.o\x1b[0m\n'}
+[5.623596] (-) TimerEvent: {}
+[5.709870] (lslidar_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32m\x1b[1mLinking C shared library liblslidar_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[5.723680] (-) TimerEvent: {}
+[5.824294] (-) TimerEvent: {}
+[5.829702] (lslidar_msgs) StdoutLine: {'line': b'[ 18%] Built target lslidar_msgs__rosidl_generator_c\n'}
+[5.853439] (lslidar_msgs) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.867397] (lslidar_msgs) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.868433] (lslidar_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[5.924576] (-) TimerEvent: {}
+[6.025609] (-) TimerEvent: {}
+[6.126672] (-) TimerEvent: {}
+[6.227408] (-) TimerEvent: {}
+[6.229651] (lslidar_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/lslidar_msgs/msg/detail/lslidar_difop__type_support.cpp.o\x1b[0m\n'}
+[6.232184] (lslidar_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/lslidar_msgs/msg/detail/lslidar_packet__type_support.cpp.o\x1b[0m\n'}
+[6.243623] (lslidar_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/lslidar_msgs/msg/lslidar_difop__type_support.cpp.o\x1b[0m\n'}
+[6.243901] (lslidar_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/lslidar_msgs/msg/detail/lslidar_point__type_support.cpp.o\x1b[0m\n'}
+[6.267218] (lslidar_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/lslidar_msgs/msg/detail/dds_fastrtps/lslidar_difop__type_support.cpp.o\x1b[0m\n'}
+[6.327517] (-) TimerEvent: {}
+[6.427934] (-) TimerEvent: {}
+[6.528438] (-) TimerEvent: {}
+[6.629404] (-) TimerEvent: {}
+[6.730265] (-) TimerEvent: {}
+[6.831028] (-) TimerEvent: {}
+[6.862062] (lslidar_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/lslidar_msgs/msg/lslidar_difop__type_support.cpp.o\x1b[0m\n'}
+[6.931215] (-) TimerEvent: {}
+[6.966011] (lslidar_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/lslidar_msgs/msg/lslidar_packet__type_support.cpp.o\x1b[0m\n'}
+[6.982963] (lslidar_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/lslidar_msgs/msg/detail/lslidar_scan__type_support.cpp.o\x1b[0m\n'}
+[7.017290] (lslidar_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/lslidar_msgs/msg/detail/lslidar_difop__type_support.c.o\x1b[0m\n'}
+[7.028087] (lslidar_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/lslidar_msgs/msg/lslidar_point__type_support.cpp.o\x1b[0m\n'}
+[7.033974] (-) TimerEvent: {}
+[7.073572] (lslidar_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/lslidar_msgs/msg/detail/lslidar_difop__type_support_c.cpp.o\x1b[0m\n'}
+[7.074350] (lslidar_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/lslidar_msgs/msg/detail/lslidar_packet__type_support.c.o\x1b[0m\n'}
+[7.089976] (lslidar_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/lslidar_msgs/msg/lslidar_scan__type_support.cpp.o\x1b[0m\n'}
+[7.134221] (-) TimerEvent: {}
+[7.160812] (lslidar_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/lslidar_msgs/msg/detail/lslidar_point__type_support.c.o\x1b[0m\n'}
+[7.172793] (lslidar_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/lslidar_msgs/msg/detail/dds_fastrtps/lslidar_packet__type_support.cpp.o\x1b[0m\n'}
+[7.174137] (lslidar_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/lslidar_msgs/msg/lslidar_sweep__type_support.cpp.o\x1b[0m\n'}
+[7.234402] (-) TimerEvent: {}
+[7.284319] (lslidar_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library liblslidar_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[7.294893] (lslidar_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/lslidar_msgs/msg/detail/lslidar_sweep__type_support.cpp.o\x1b[0m\n'}
+[7.308000] (lslidar_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/lslidar_msgs/msg/detail/lslidar_scan__type_support.c.o\x1b[0m\n'}
+[7.334588] (-) TimerEvent: {}
+[7.366537] (lslidar_msgs) StdoutLine: {'line': b'[ 53%] Built target lslidar_msgs__rosidl_typesupport_c\n'}
+[7.408370] (lslidar_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/lslidar_msgs/msg/detail/lslidar_sweep__type_support.c.o\x1b[0m\n'}
+[7.434717] (-) TimerEvent: {}
+[7.469573] (lslidar_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/lslidar_msgs/msg/lslidar_packet__type_support.cpp.o\x1b[0m\n'}
+[7.481031] (lslidar_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/lslidar_msgs/msg/detail/dds_fastrtps/lslidar_point__type_support.cpp.o\x1b[0m\n'}
+[7.534946] (-) TimerEvent: {}
+[7.564364] (lslidar_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking C shared library liblslidar_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[7.574082] (lslidar_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/lslidar_msgs/msg/detail/lslidar_packet__type_support_c.cpp.o\x1b[0m\n'}
+[7.635134] (-) TimerEvent: {}
+[7.641011] (lslidar_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/lslidar_msgs/msg/detail/lslidar_point__type_support_c.cpp.o\x1b[0m\n'}
+[7.679233] (lslidar_msgs) StdoutLine: {'line': b'[ 62%] Built target lslidar_msgs__rosidl_typesupport_introspection_c\n'}
+[7.721275] (lslidar_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/lslidar_msgs/msg/detail/lslidar_scan__type_support_c.cpp.o\x1b[0m\n'}
+[7.735270] (-) TimerEvent: {}
+[7.745401] (lslidar_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/lslidar_msgs/msg/detail/dds_fastrtps/lslidar_scan__type_support.cpp.o\x1b[0m\n'}
+[7.836041] (-) TimerEvent: {}
+[7.937086] (-) TimerEvent: {}
+[8.041114] (-) TimerEvent: {}
+[8.052504] (lslidar_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/lslidar_msgs/msg/lslidar_point__type_support.cpp.o\x1b[0m\n'}
+[8.063399] (lslidar_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/lslidar_msgs/msg/detail/dds_fastrtps/lslidar_sweep__type_support.cpp.o\x1b[0m\n'}
+[8.141292] (-) TimerEvent: {}
+[8.242065] (-) TimerEvent: {}
+[8.258225] (lslidar_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/lslidar_msgs/msg/detail/lslidar_sweep__type_support_c.cpp.o\x1b[0m\n'}
+[8.322336] (lslidar_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/lslidar_msgs/msg/lslidar_scan__type_support.cpp.o\x1b[0m\n'}
+[8.342259] (-) TimerEvent: {}
+[8.387137] (lslidar_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/lslidar_msgs/msg/lslidar_sweep__type_support.cpp.o\x1b[0m\n'}
+[8.442521] (-) TimerEvent: {}
+[8.543374] (-) TimerEvent: {}
+[8.644131] (-) TimerEvent: {}
+[8.744929] (-) TimerEvent: {}
+[8.787361] (lslidar_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library liblslidar_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[8.845141] (-) TimerEvent: {}
+[8.888603] (lslidar_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library liblslidar_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[8.916080] (lslidar_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library liblslidar_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[8.945218] (-) TimerEvent: {}
+[8.962904] (lslidar_msgs) StdoutLine: {'line': b'[ 78%] Built target lslidar_msgs__rosidl_typesupport_fastrtps_c\n'}
+[9.032514] (lslidar_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library liblslidar_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[9.045464] (-) TimerEvent: {}
+[9.051229] (lslidar_msgs) StdoutLine: {'line': b'[ 79%] Built target lslidar_msgs__rosidl_typesupport_introspection_cpp\n'}
+[9.062527] (lslidar_msgs) StdoutLine: {'line': b'[ 79%] Built target lslidar_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[9.116944] (lslidar_msgs) StdoutLine: {'line': b'[ 79%] Built target lslidar_msgs__rosidl_typesupport_cpp\n'}
+[9.145547] (-) TimerEvent: {}
+[9.166463] (lslidar_msgs) StdoutLine: {'line': b'[ 79%] Built target lslidar_msgs\n'}
+[9.218250] (lslidar_msgs) StdoutLine: {'line': b'[ 81%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[9.245852] (-) TimerEvent: {}
+[9.346791] (-) TimerEvent: {}
+[9.447736] (-) TimerEvent: {}
+[9.548642] (-) TimerEvent: {}
+[9.649543] (-) TimerEvent: {}
+[9.750351] (-) TimerEvent: {}
+[9.850884] (-) TimerEvent: {}
+[9.951420] (-) TimerEvent: {}
+[10.051929] (-) TimerEvent: {}
+[10.152382] (-) TimerEvent: {}
+[10.252905] (-) TimerEvent: {}
+[10.353444] (-) TimerEvent: {}
+[10.453996] (-) TimerEvent: {}
+[10.500753] (lslidar_msgs) StdoutLine: {'line': b'[ 81%] Built target lslidar_msgs__py\n'}
+[10.537731] (lslidar_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_generator_py.dir/rosidl_generator_py/lslidar_msgs/msg/_lslidar_difop_s.c.o\x1b[0m\n'}
+[10.538999] (lslidar_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_generator_py.dir/rosidl_generator_py/lslidar_msgs/msg/_lslidar_scan_s.c.o\x1b[0m\n'}
+[10.543639] (lslidar_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_generator_py.dir/rosidl_generator_py/lslidar_msgs/msg/_lslidar_packet_s.c.o\x1b[0m\n'}
+[10.548676] (lslidar_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_generator_py.dir/rosidl_generator_py/lslidar_msgs/msg/_lslidar_sweep_s.c.o\x1b[0m\n'}
+[10.548929] (lslidar_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_generator_py.dir/rosidl_generator_py/lslidar_msgs/msg/_lslidar_point_s.c.o\x1b[0m\n'}
+[10.554065] (-) TimerEvent: {}
+[10.654545] (-) TimerEvent: {}
+[10.755429] (-) TimerEvent: {}
+[10.763141] (lslidar_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/lslidar_msgs/liblslidar_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[10.855677] (-) TimerEvent: {}
+[10.872932] (lslidar_msgs) StdoutLine: {'line': b'[ 90%] Built target lslidar_msgs__rosidl_generator_py\n'}
+[10.906897] (lslidar_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/lslidar_msgs/_lslidar_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[10.921436] (lslidar_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/lslidar_msgs/_lslidar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[10.925938] (lslidar_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/lslidar_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/lslidar_msgs/_lslidar_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[10.955904] (-) TimerEvent: {}
+[11.057018] (-) TimerEvent: {}
+[11.102978] (lslidar_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[11.110343] (lslidar_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[11.126428] (lslidar_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[11.157157] (-) TimerEvent: {}
+[11.163102] (lslidar_msgs) StdoutLine: {'line': b'[100%] Built target lslidar_msgs__rosidl_typesupport_c__pyext\n'}
+[11.180995] (lslidar_msgs) StdoutLine: {'line': b'[100%] Built target lslidar_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[11.187594] (lslidar_msgs) StdoutLine: {'line': b'[100%] Built target lslidar_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[11.218976] (lslidar_msgs) CommandEnded: {'returncode': 0}
+[11.221542] (lslidar_msgs) JobProgress: {'identifier': 'lslidar_msgs', 'progress': 'install'}
+[11.247627] (lslidar_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/elf/elf_slam_ws/build/lslidar_msgs'], 'cwd': '/home/elf/elf_slam_ws/build/lslidar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en'), ('USER', 'elf'), ('SSH_CLIENT', '192.168.72.118 61810 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/elf'), ('MUTTER_DEBUG_ENABLE_ATOMIC_KMS', '0'), ('OLDPWD', '/home/elf/elf_slam_ws'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'en_US.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/elf/elf_slam_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'elf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-color'), ('XDG_SESSION_ID', 'c10'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'letter'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('CLUTTER_PAINT', 'disable-dynamic-max-render-time'), ('PROMPT_COMMAND', 'history -a;pwd > /tmp/5255c8ce4e;'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('MUTTER_DEBUG_FORCE_KMS_MODE', 'simple'), ('PWD', '/home/elf/elf_slam_ws/build/lslidar_msgs'), ('SSH_CONNECTION', '192.168.72.118 61810 192.168.72.163 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('TZ', 'Asia/Shanghai'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble')]), 'shell': False}
+[11.257232] (-) TimerEvent: {}
+[11.276142] (lslidar_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.276846] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/ament_index/resource_index/rosidl_interfaces/lslidar_msgs\n'}
+[11.277617] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs\n'}
+[11.278038] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg\n'}
+[11.278487] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[11.278894] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/lslidar_sweep.h\n'}
+[11.279285] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/lslidar_scan.h\n'}
+[11.279716] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/lslidar_difop.h\n'}
+[11.280125] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail\n'}
+[11.280496] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__functions.h\n'}
+[11.280869] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__struct.h\n'}
+[11.281407] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__struct.h\n'}
+[11.282362] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__functions.h\n'}
+[11.282989] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__functions.h\n'}
+[11.283550] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__struct.h\n'}
+[11.284322] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__functions.c\n'}
+[11.285051] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__struct.h\n'}
+[11.285854] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__type_support.h\n'}
+[11.286691] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__type_support.h\n'}
+[11.287680] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__type_support.h\n'}
+[11.288279] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__functions.h\n'}
+[11.289153] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__functions.c\n'}
+[11.289703] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__functions.c\n'}
+[11.290448] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__type_support.h\n'}
+[11.290773] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__functions.c\n'}
+[11.290943] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__struct.h\n'}
+[11.291043] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__functions.c\n'}
+[11.291111] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__functions.h\n'}
+[11.291175] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__type_support.h\n'}
+[11.291238] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/lslidar_point.h\n'}
+[11.291313] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/lslidar_packet.h\n'}
+[11.291628] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/environment/library_path.sh\n'}
+[11.291973] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/environment/library_path.dsv\n'}
+[11.292062] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_generator_c.so\n'}
+[11.292352] (lslidar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_generator_c.so" to ""\n'}
+[11.292700] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs\n'}
+[11.293310] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg\n'}
+[11.293746] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[11.294308] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail\n'}
+[11.294764] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__rosidl_typesupport_fastrtps_c.h\n'}
+[11.295090] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__rosidl_typesupport_fastrtps_c.h\n'}
+[11.295413] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__rosidl_typesupport_fastrtps_c.h\n'}
+[11.295737] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__rosidl_typesupport_fastrtps_c.h\n'}
+[11.296085] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__rosidl_typesupport_fastrtps_c.h\n'}
+[11.296410] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[11.296734] (lslidar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[11.297090] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs\n'}
+[11.297413] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg\n'}
+[11.297761] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/lslidar_sweep.hpp\n'}
+[11.298092] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[11.298416] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/lslidar_point.hpp\n'}
+[11.298738] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/lslidar_scan.hpp\n'}
+[11.299060] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/lslidar_packet.hpp\n'}
+[11.299381] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/lslidar_difop.hpp\n'}
+[11.299703] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail\n'}
+[11.300024] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__builder.hpp\n'}
+[11.300347] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__builder.hpp\n'}
+[11.300668] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__struct.hpp\n'}
+[11.301008] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__type_support.hpp\n'}
+[11.301342] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__traits.hpp\n'}
+[11.301711] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__traits.hpp\n'}
+[11.302031] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__traits.hpp\n'}
+[11.302350] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__type_support.hpp\n'}
+[11.302673] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__struct.hpp\n'}
+[11.302994] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__traits.hpp\n'}
+[11.303329] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__struct.hpp\n'}
+[11.303662] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__struct.hpp\n'}
+[11.303981] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__builder.hpp\n'}
+[11.304320] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__type_support.hpp\n'}
+[11.304651] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__traits.hpp\n'}
+[11.304972] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__struct.hpp\n'}
+[11.305292] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__type_support.hpp\n'}
+[11.305612] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__builder.hpp\n'}
+[11.305932] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__type_support.hpp\n'}
+[11.306252] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__builder.hpp\n'}
+[11.306571] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs\n'}
+[11.306890] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg\n'}
+[11.307209] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[11.307533] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail\n'}
+[11.307882] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/dds_fastrtps\n'}
+[11.308232] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.308557] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.308882] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.309204] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.309527] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.309849] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[11.310170] (lslidar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[11.310490] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs\n'}
+[11.310810] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg\n'}
+[11.311210] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[11.311537] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail\n'}
+[11.311857] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__type_support.c\n'}
+[11.312235] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__type_support.c\n'}
+[11.312562] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__rosidl_typesupport_introspection_c.h\n'}
+[11.312892] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__type_support.c\n'}
+[11.313247] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__rosidl_typesupport_introspection_c.h\n'}
+[11.313580] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__rosidl_typesupport_introspection_c.h\n'}
+[11.313907] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__type_support.c\n'}
+[11.314232] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__rosidl_typesupport_introspection_c.h\n'}
+[11.314586] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__type_support.c\n'}
+[11.314913] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__rosidl_typesupport_introspection_c.h\n'}
+[11.315235] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_introspection_c.so\n'}
+[11.315558] (lslidar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[11.315880] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_c.so\n'}
+[11.316203] (lslidar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_c.so" to ""\n'}
+[11.316525] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs\n'}
+[11.316845] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg\n'}
+[11.317164] (lslidar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail\n'}
+[11.317483] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.317838] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_scan__type_support.cpp\n'}
+[11.318163] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.318512] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.318834] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_point__type_support.cpp\n'}
+[11.319155] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.319475] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_difop__type_support.cpp\n'}
+[11.319795] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.320116] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_packet__type_support.cpp\n'}
+[11.320439] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/include/lslidar_msgs/lslidar_msgs/msg/detail/lslidar_sweep__type_support.cpp\n'}
+[11.320759] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[11.321110] (lslidar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[11.321435] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_cpp.so\n'}
+[11.321756] (lslidar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[11.322118] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/environment/pythonpath.sh\n'}
+[11.322438] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/environment/pythonpath.dsv\n'}
+[11.322775] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs-1.2.0-py3.10.egg-info\n'}
+[11.323096] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs-1.2.0-py3.10.egg-info/top_level.txt\n'}
+[11.323417] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs-1.2.0-py3.10.egg-info/SOURCES.txt\n'}
+[11.323738] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs-1.2.0-py3.10.egg-info/PKG-INFO\n'}
+[11.324058] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs-1.2.0-py3.10.egg-info/dependency_links.txt\n'}
+[11.324475] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs\n'}
+[11.324805] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg\n'}
+[11.325124] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_point_s.c\n'}
+[11.325444] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_point.py\n'}
+[11.325783] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_scan_s.c\n'}
+[11.326101] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_sweep_s.c\n'}
+[11.326422] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_scan.py\n'}
+[11.326741] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/__init__.py\n'}
+[11.327062] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_difop.py\n'}
+[11.327382] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_packet_s.c\n'}
+[11.327720] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_difop_s.c\n'}
+[11.328050] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_sweep.py\n'}
+[11.328369] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_packet.py\n'}
+[11.328688] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/_lslidar_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[11.329011] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[11.329334] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[11.329654] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/liblslidar_msgs__rosidl_generator_py.so\n'}
+[11.329975] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/_lslidar_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[11.330298] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/__init__.py\n'}
+[11.330617] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[11.330957] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/_lslidar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[11.352132] (lslidar_msgs) StdoutLine: {'line': b"Listing '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs'...\n"}
+[11.353109] (lslidar_msgs) StdoutLine: {'line': b"Compiling '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/__init__.py'...\n"}
+[11.353815] (lslidar_msgs) StdoutLine: {'line': b"Listing '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg'...\n"}
+[11.354456] (lslidar_msgs) StdoutLine: {'line': b"Compiling '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/__init__.py'...\n"}
+[11.354971] (lslidar_msgs) StdoutLine: {'line': b"Compiling '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_difop.py'...\n"}
+[11.355461] (lslidar_msgs) StdoutLine: {'line': b"Compiling '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_packet.py'...\n"}
+[11.355908] (lslidar_msgs) StdoutLine: {'line': b"Compiling '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_point.py'...\n"}
+[11.356331] (lslidar_msgs) StdoutLine: {'line': b"Compiling '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_scan.py'...\n"}
+[11.356752] (lslidar_msgs) StdoutLine: {'line': b"Compiling '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/msg/_lslidar_sweep.py'...\n"}
+[11.357362] (-) TimerEvent: {}
+[11.366902] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[11.367322] (lslidar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[11.367471] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[11.367859] (lslidar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[11.368253] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[11.368590] (lslidar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages/lslidar_msgs/lslidar_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[11.368919] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_generator_py.so\n'}
+[11.369257] (lslidar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_msgs/lib/liblslidar_msgs__rosidl_generator_py.so" to ""\n'}
+[11.369506] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/ament_index/resource_index/rust_packages/lslidar_msgs\n'}
+[11.369605] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/rust\n'}
+[11.369697] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/rust/build.rs\n'}
+[11.369762] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/rust/src\n'}
+[11.369843] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/rust/src/msg\n'}
+[11.369932] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/rust/src/msg/rmw.rs\n'}
+[11.369996] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/rust/src/lib.rs\n'}
+[11.370074] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/rust/src/msg.rs\n'}
+[11.370398] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/rust/Cargo.toml\n'}
+[11.370772] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/msg/LslidarDifop.idl\n'}
+[11.371158] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/msg/LslidarPacket.idl\n'}
+[11.371513] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/msg/LslidarPoint.idl\n'}
+[11.371871] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/msg/LslidarScan.idl\n'}
+[11.372006] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/msg/LslidarSweep.idl\n'}
+[11.372116] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/msg/LslidarDifop.msg\n'}
+[11.372182] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/msg/LslidarPacket.msg\n'}
+[11.372266] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/msg/LslidarPoint.msg\n'}
+[11.372328] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/msg/LslidarScan.msg\n'}
+[11.372388] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/msg/LslidarSweep.msg\n'}
+[11.372658] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/ament_index/resource_index/package_run_dependencies/lslidar_msgs\n'}
+[11.372798] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/ament_index/resource_index/parent_prefix_path/lslidar_msgs\n'}
+[11.372889] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/environment/ament_prefix_path.sh\n'}
+[11.373112] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/environment/ament_prefix_path.dsv\n'}
+[11.373364] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/environment/path.sh\n'}
+[11.373468] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/environment/path.dsv\n'}
+[11.373536] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/local_setup.bash\n'}
+[11.373624] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/local_setup.sh\n'}
+[11.373688] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/local_setup.zsh\n'}
+[11.373772] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/local_setup.dsv\n'}
+[11.373858] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.dsv\n'}
+[11.373921] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/ament_index/resource_index/packages/lslidar_msgs\n'}
+[11.373999] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/export_lslidar_msgs__rosidl_generator_cExport.cmake\n'}
+[11.374059] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/export_lslidar_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[11.374149] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/export_lslidar_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[11.374224] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/export_lslidar_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[11.374304] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/export_lslidar_msgs__rosidl_generator_cppExport.cmake\n'}
+[11.374399] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/export_lslidar_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[11.374476] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/export_lslidar_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[11.374539] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/lslidar_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[11.374603] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/lslidar_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[11.374685] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/lslidar_msgs__rosidl_typesupport_cExport.cmake\n'}
+[11.374764] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/lslidar_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[11.374849] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/lslidar_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[11.374910] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/lslidar_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[11.374989] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/lslidar_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[11.375076] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/lslidar_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[11.375139] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/export_lslidar_msgs__rosidl_generator_pyExport.cmake\n'}
+[11.375222] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/export_lslidar_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[11.375305] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[11.375419] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[11.375483] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[11.375545] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[11.375619] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[11.375683] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[11.375749] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[11.375848] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/lslidar_msgsConfig.cmake\n'}
+[11.375908] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake/lslidar_msgsConfig-version.cmake\n'}
+[11.375975] (lslidar_msgs) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/package.xml\n'}
+[11.381050] (lslidar_msgs) CommandEnded: {'returncode': 0}
+[11.434786] (lslidar_msgs) JobEnded: {'identifier': 'lslidar_msgs', 'rc': 0}
+[11.437092] (lslidar_driver) JobStarted: {'identifier': 'lslidar_driver'}
+[11.448528] (lslidar_driver) JobProgress: {'identifier': 'lslidar_driver', 'progress': 'cmake'}
+[11.449396] (lslidar_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/elf/elf_slam_ws/src/lslidar_driver', '-DCMAKE_INSTALL_PREFIX=/home/elf/elf_slam_ws/install/lslidar_driver'], 'cwd': '/home/elf/elf_slam_ws/build/lslidar_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en'), ('USER', 'elf'), ('SSH_CLIENT', '192.168.72.118 61810 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/elf'), ('MUTTER_DEBUG_ENABLE_ATOMIC_KMS', '0'), ('OLDPWD', '/home/elf/elf_slam_ws'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'en_US.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/elf/elf_slam_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'elf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-color'), ('XDG_SESSION_ID', 'c10'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'letter'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('CLUTTER_PAINT', 'disable-dynamic-max-render-time'), ('PROMPT_COMMAND', 'history -a;pwd > /tmp/5255c8ce4e;'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('MUTTER_DEBUG_FORCE_KMS_MODE', 'simple'), ('PWD', '/home/elf/elf_slam_ws/build/lslidar_driver'), ('SSH_CONNECTION', '192.168.72.118 61810 192.168.72.163 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('TZ', 'Asia/Shanghai'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble')]), 'shell': False}
+[11.457818] (-) TimerEvent: {}
+[11.558881] (-) TimerEvent: {}
+[11.576919] (lslidar_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[11.659480] (-) TimerEvent: {}
+[11.670956] (lslidar_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[11.680895] (lslidar_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[11.759707] (-) TimerEvent: {}
+[11.838067] (lslidar_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[11.849199] (lslidar_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[11.850181] (lslidar_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[11.850551] (lslidar_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[11.854316] (lslidar_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[11.860029] (-) TimerEvent: {}
+[11.961026] (-) TimerEvent: {}
+[12.051655] (lslidar_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[12.061447] (-) TimerEvent: {}
+[12.090111] (lslidar_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[12.091060] (lslidar_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[12.093182] (lslidar_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[12.161586] (-) TimerEvent: {}
+[12.262587] (-) TimerEvent: {}
+[12.363589] (-) TimerEvent: {}
+[12.465167] (-) TimerEvent: {}
+[12.482064] (lslidar_driver) StdoutLine: {'line': b'-- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread \n'}
+[12.491855] (lslidar_driver) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[12.565469] (-) TimerEvent: {}
+[12.666610] (-) TimerEvent: {}
+[12.767423] (-) TimerEvent: {}
+[12.837113] (lslidar_driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[12.867674] (-) TimerEvent: {}
+[12.968754] (-) TimerEvent: {}
+[13.069673] (-) TimerEvent: {}
+[13.094325] (lslidar_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[13.100709] (lslidar_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[13.112048] (lslidar_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[13.128224] (lslidar_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[13.150321] (lslidar_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[13.169806] (-) TimerEvent: {}
+[13.225935] (lslidar_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[13.230550] (lslidar_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[13.269953] (-) TimerEvent: {}
+[13.370649] (-) TimerEvent: {}
+[13.378773] (lslidar_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[13.410846] (lslidar_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[13.459593] (lslidar_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[13.470810] (-) TimerEvent: {}
+[13.473247] (lslidar_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[13.570908] (-) TimerEvent: {}
+[13.582976] (lslidar_driver) StdoutLine: {'line': b"-- Checking for module 'eigen3'\n"}
+[13.609960] (lslidar_driver) StdoutLine: {'line': b'--   Found eigen3, version 3.4.0\n'}
+[13.661247] (lslidar_driver) StdoutLine: {'line': b'-- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") \n'}
+[13.661650] (lslidar_driver) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[13.671040] (-) TimerEvent: {}
+[13.688992] (lslidar_driver) StdoutLine: {'line': b'-- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization \n'}
+[13.708217] (lslidar_driver) StdoutLine: {'line': b"-- Checking for module 'flann'\n"}
+[13.729099] (lslidar_driver) StdoutLine: {'line': b'--   Found flann, version 1.9.1\n'}
+[13.771359] (-) TimerEvent: {}
+[13.792577] (lslidar_driver) StdoutLine: {'line': b'-- Found FLANN: /usr/lib/aarch64-linux-gnu/libflann_cpp.so  \n'}
+[13.793452] (lslidar_driver) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/aarch64-linux-gnu/libflann_cpp.so)\n'}
+[13.857545] (lslidar_driver) StdoutLine: {'line': b'-- Found GLEW: /usr/lib/aarch64-linux-gnu/libGLEW.so  \n'}
+[13.867442] (lslidar_driver) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/aarch64-linux-gnu/libOpenGL.so  found components: OpenGL GLX \n'}
+[13.871396] (-) TimerEvent: {}
+[13.971969] (-) TimerEvent: {}
+[14.073002] (-) TimerEvent: {}
+[14.174604] (-) TimerEvent: {}
+[14.202209] (lslidar_driver) StdoutLine: {'line': b'-- Found MPI_C: /usr/lib/aarch64-linux-gnu/libmpi.so (found version "3.1") \n'}
+[14.203401] (lslidar_driver) StdoutLine: {'line': b'-- Found MPI: TRUE (found version "3.1") found components: C \n'}
+[14.209644] (lslidar_driver) StdoutLine: {'line': b'-- Found JsonCpp: /usr/lib/aarch64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0") \n'}
+[14.223118] (lslidar_driver) StdoutLine: {'line': b'-- Found ZLIB: /usr/lib/aarch64-linux-gnu/libz.so (found version "1.2.11") \n'}
+[14.250009] (lslidar_driver) StdoutLine: {'line': b'-- Found PNG: /usr/lib/aarch64-linux-gnu/libpng.so (found version "1.6.37") \n'}
+[14.274841] (-) TimerEvent: {}
+[14.286664] (lslidar_driver) StdoutLine: {'line': b'-- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") \n'}
+[14.375111] (-) TimerEvent: {}
+[14.428331] (lslidar_driver) StdoutLine: {'line': b'-- Found X11: /usr/include   \n'}
+[14.429204] (lslidar_driver) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so\n'}
+[14.475318] (-) TimerEvent: {}
+[14.573713] (lslidar_driver) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/aarch64-linux-gnu/libX11.so;/usr/lib/aarch64-linux-gnu/libXext.so - found\n'}
+[14.574635] (lslidar_driver) StdoutLine: {'line': b'-- Looking for gethostbyname\n'}
+[14.575356] (-) TimerEvent: {}
+[14.675994] (-) TimerEvent: {}
+[14.741074] (lslidar_driver) StdoutLine: {'line': b'-- Looking for gethostbyname - found\n'}
+[14.741875] (lslidar_driver) StdoutLine: {'line': b'-- Looking for connect\n'}
+[14.776164] (-) TimerEvent: {}
+[14.876734] (-) TimerEvent: {}
+[14.954200] (lslidar_driver) StdoutLine: {'line': b'-- Looking for connect - found\n'}
+[14.955160] (lslidar_driver) StdoutLine: {'line': b'-- Looking for remove\n'}
+[14.977016] (-) TimerEvent: {}
+[15.078165] (-) TimerEvent: {}
+[15.151232] (lslidar_driver) StdoutLine: {'line': b'-- Looking for remove - found\n'}
+[15.152079] (lslidar_driver) StdoutLine: {'line': b'-- Looking for shmat\n'}
+[15.178375] (-) TimerEvent: {}
+[15.279390] (-) TimerEvent: {}
+[15.344019] (lslidar_driver) StdoutLine: {'line': b'-- Looking for shmat - found\n'}
+[15.344867] (lslidar_driver) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE\n'}
+[15.379508] (-) TimerEvent: {}
+[15.480032] (-) TimerEvent: {}
+[15.541023] (lslidar_driver) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE - found\n'}
+[15.580303] (-) TimerEvent: {}
+[15.681200] (-) TimerEvent: {}
+[15.710322] (lslidar_driver) StdoutLine: {'line': b'-- Found EXPAT: /usr/lib/aarch64-linux-gnu/libexpat.so (found version "2.4.7") \n'}
+[15.713676] (lslidar_driver) StdoutLine: {'line': b'-- Found double-conversion: /usr/lib/aarch64-linux-gnu/libdouble-conversion.so  \n'}
+[15.717945] (lslidar_driver) StdoutLine: {'line': b'-- Found LZ4: /usr/lib/aarch64-linux-gnu/liblz4.so (found version "1.9.3") \n'}
+[15.722189] (lslidar_driver) StdoutLine: {'line': b'-- Found LZMA: /usr/lib/aarch64-linux-gnu/liblzma.so (found version "5.2.5") \n'}
+[15.781463] (-) TimerEvent: {}
+[15.785946] (lslidar_driver) StdoutLine: {'line': b'-- Found JPEG: /usr/lib/aarch64-linux-gnu/libjpeg.so (found version "80") \n'}
+[15.794410] (lslidar_driver) StdoutLine: {'line': b'-- Found TIFF: /usr/lib/aarch64-linux-gnu/libtiff.so (found version "4.3.0")  \n'}
+[15.801509] (lslidar_driver) StdoutLine: {'line': b'-- Found Freetype: /usr/lib/aarch64-linux-gnu/libfreetype.so (found version "2.11.1") \n'}
+[15.810988] (lslidar_driver) StdoutLine: {'line': b'-- Found utf8cpp: /usr/include/utf8cpp  \n'}
+[15.881731] (-) TimerEvent: {}
+[15.942789] (lslidar_driver) StdoutLine: {'line': b"-- Checking for module 'libusb-1.0'\n"}
+[15.967295] (lslidar_driver) StdoutLine: {'line': b'--   Found libusb-1.0, version 1.0.25\n'}
+[15.981975] (-) TimerEvent: {}
+[16.017274] (lslidar_driver) StdoutLine: {'line': b'-- Found libusb: /usr/lib/aarch64-linux-gnu/libusb-1.0.so  \n'}
+[16.023465] (lslidar_driver) StdoutLine: {'line': b'-- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0") \n'}
+[16.024020] (lslidar_driver) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[16.082204] (-) TimerEvent: {}
+[16.113067] (lslidar_driver) StdoutLine: {'line': b'-- Found OpenNI2: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33") \n'}
+[16.113874] (lslidar_driver) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[16.114250] (lslidar_driver) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to pcap will be disabled\x1b[0m\n'}
+[16.182398] (-) TimerEvent: {}
+[16.283355] (-) TimerEvent: {}
+[16.366615] (lslidar_driver) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[16.378247] (lslidar_driver) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[16.383541] (-) TimerEvent: {}
+[16.390695] (lslidar_driver) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[16.483810] (-) TimerEvent: {}
+[16.585009] (-) TimerEvent: {}
+[16.638953] (lslidar_driver) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[16.685242] (-) TimerEvent: {}
+[16.786214] (-) TimerEvent: {}
+[16.887271] (-) TimerEvent: {}
+[16.896494] (lslidar_driver) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[16.987486] (-) TimerEvent: {}
+[17.088460] (-) TimerEvent: {}
+[17.144871] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_COMMON\n'}
+[17.146280] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_COMMON: /usr/lib/aarch64-linux-gnu/libpcl_common.so  \n'}
+[17.146786] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_KDTREE\n'}
+[17.147934] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_KDTREE: /usr/lib/aarch64-linux-gnu/libpcl_kdtree.so  \n'}
+[17.148411] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_OCTREE\n'}
+[17.149410] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_OCTREE: /usr/lib/aarch64-linux-gnu/libpcl_octree.so  \n'}
+[17.149879] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_SEARCH\n'}
+[17.150761] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_SEARCH: /usr/lib/aarch64-linux-gnu/libpcl_search.so  \n'}
+[17.151194] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_SAMPLE_CONSENSUS\n'}
+[17.152133] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_SAMPLE_CONSENSUS: /usr/lib/aarch64-linux-gnu/libpcl_sample_consensus.so  \n'}
+[17.152597] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_FILTERS\n'}
+[17.153459] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_FILTERS: /usr/lib/aarch64-linux-gnu/libpcl_filters.so  \n'}
+[17.153829] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_2D\n'}
+[17.154178] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_2D: /usr/include/pcl-1.12  \n'}
+[17.154562] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_GEOMETRY\n'}
+[17.154908] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_GEOMETRY: /usr/include/pcl-1.12  \n'}
+[17.155228] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_IO\n'}
+[17.155758] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_IO: /usr/lib/aarch64-linux-gnu/libpcl_io.so  \n'}
+[17.156091] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_FEATURES\n'}
+[17.157146] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_FEATURES: /usr/lib/aarch64-linux-gnu/libpcl_features.so  \n'}
+[17.157466] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_ML\n'}
+[17.158654] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_ML: /usr/lib/aarch64-linux-gnu/libpcl_ml.so  \n'}
+[17.158791] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_SEGMENTATION\n'}
+[17.159824] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_SEGMENTATION: /usr/lib/aarch64-linux-gnu/libpcl_segmentation.so  \n'}
+[17.160204] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_VISUALIZATION\n'}
+[17.161304] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_VISUALIZATION: /usr/lib/aarch64-linux-gnu/libpcl_visualization.so  \n'}
+[17.161596] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_SURFACE\n'}
+[17.162549] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_SURFACE: /usr/lib/aarch64-linux-gnu/libpcl_surface.so  \n'}
+[17.162878] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_REGISTRATION\n'}
+[17.163832] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_REGISTRATION: /usr/lib/aarch64-linux-gnu/libpcl_registration.so  \n'}
+[17.164137] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_KEYPOINTS\n'}
+[17.165190] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_KEYPOINTS: /usr/lib/aarch64-linux-gnu/libpcl_keypoints.so  \n'}
+[17.165476] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_TRACKING\n'}
+[17.166473] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_TRACKING: /usr/lib/aarch64-linux-gnu/libpcl_tracking.so  \n'}
+[17.166724] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_RECOGNITION\n'}
+[17.167744] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_RECOGNITION: /usr/lib/aarch64-linux-gnu/libpcl_recognition.so  \n'}
+[17.168147] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_STEREO\n'}
+[17.169640] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_STEREO: /usr/lib/aarch64-linux-gnu/libpcl_stereo.so  \n'}
+[17.169827] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_APPS\n'}
+[17.170544] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_APPS: /usr/lib/aarch64-linux-gnu/libpcl_apps.so  \n'}
+[17.171504] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_IN_HAND_SCANNER\n'}
+[17.171876] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  \n'}
+[17.172028] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_MODELER\n'}
+[17.172339] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_MODELER: /usr/include/pcl-1.12  \n'}
+[17.172482] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_POINT_CLOUD_EDITOR\n'}
+[17.177239] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  \n'}
+[17.177958] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_OUTOFCORE\n'}
+[17.179039] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_OUTOFCORE: /usr/lib/aarch64-linux-gnu/libpcl_outofcore.so  \n'}
+[17.179516] (lslidar_driver) StdoutLine: {'line': b'-- looking for PCL_PEOPLE\n'}
+[17.180784] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL_PEOPLE: /usr/lib/aarch64-linux-gnu/libpcl_people.so  \n'}
+[17.182162] (lslidar_driver) StdoutLine: {'line': b'-- Found PCL: pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_ml;pcl_segmentation;pcl_visualization;pcl_surface;pcl_registration;pcl_keypoints;pcl_tracking;pcl_recognition;pcl_stereo;pcl_apps;pcl_outofcore;pcl_people;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::GUISupportQt;FLANN::FLANN;QHULL::QHULL  \n'}
+[17.185492] (lslidar_driver) StdoutLine: {'line': b'-- Found diagnostic_updater: 4.0.6 (/opt/ros/humble/share/diagnostic_updater/cmake)\n'}
+[17.188507] (-) TimerEvent: {}
+[17.221752] (lslidar_driver) StdoutLine: {'line': b'-- Found lslidar_msgs: 1.2.0 (/home/elf/elf_slam_ws/install/lslidar_msgs/share/lslidar_msgs/cmake)\n'}
+[17.246660] (lslidar_driver) StdoutLine: {'line': b'-- Found pluginlib: 5.1.3 (/opt/ros/humble/share/pluginlib/cmake)\n'}
+[17.275381] (lslidar_driver) StdoutLine: {'line': b'-- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)\n'}
+[17.288733] (-) TimerEvent: {}
+[17.389619] (-) TimerEvent: {}
+[17.490515] (-) TimerEvent: {}
+[17.540724] (lslidar_driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[17.590738] (-) TimerEvent: {}
+[17.655802] (lslidar_driver) StdoutLine: {'line': b'-- Generating done\n'}
+[17.676341] (lslidar_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/elf/elf_slam_ws/build/lslidar_driver\n'}
+[17.691035] (-) TimerEvent: {}
+[17.733056] (lslidar_driver) CommandEnded: {'returncode': 0}
+[17.735724] (lslidar_driver) JobProgress: {'identifier': 'lslidar_driver', 'progress': 'build'}
+[17.737681] (lslidar_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/elf/elf_slam_ws/build/lslidar_driver', '--', '-j8', '-l8'], 'cwd': '/home/elf/elf_slam_ws/build/lslidar_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en'), ('USER', 'elf'), ('SSH_CLIENT', '192.168.72.118 61810 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/elf'), ('MUTTER_DEBUG_ENABLE_ATOMIC_KMS', '0'), ('OLDPWD', '/home/elf/elf_slam_ws'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'en_US.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/elf/elf_slam_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'elf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-color'), ('XDG_SESSION_ID', 'c10'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'letter'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('CLUTTER_PAINT', 'disable-dynamic-max-render-time'), ('PROMPT_COMMAND', 'history -a;pwd > /tmp/5255c8ce4e;'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('MUTTER_DEBUG_FORCE_KMS_MODE', 'simple'), ('PWD', '/home/elf/elf_slam_ws/build/lslidar_driver'), ('SSH_CONNECTION', '192.168.72.118 61810 192.168.72.163 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('TZ', 'Asia/Shanghai'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble')]), 'shell': False}
+[17.791259] (-) TimerEvent: {}
+[17.853125] (lslidar_driver) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_driver_node.dir/src/lsiosr.cpp.o\x1b[0m\n'}
+[17.855299] (lslidar_driver) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_driver_node.dir/src/lslidar_driver_node.cc.o\x1b[0m\n'}
+[17.864329] (lslidar_driver) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_driver_node.dir/src/lslidar_driver.cc.o\x1b[0m\n'}
+[17.865212] (lslidar_driver) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/lslidar_driver_node.dir/src/input.cc.o\x1b[0m\n'}
+[17.891393] (-) TimerEvent: {}
+[17.992118] (-) TimerEvent: {}
+[18.093096] (-) TimerEvent: {}
+[18.193796] (-) TimerEvent: {}
+[18.294992] (-) TimerEvent: {}
+[18.395768] (-) TimerEvent: {}
+[18.496559] (-) TimerEvent: {}
+[18.597327] (-) TimerEvent: {}
+[18.698139] (-) TimerEvent: {}
+[18.799031] (-) TimerEvent: {}
+[18.900124] (-) TimerEvent: {}
+[19.001226] (-) TimerEvent: {}
+[19.102316] (-) TimerEvent: {}
+[19.203382] (-) TimerEvent: {}
+[19.304396] (-) TimerEvent: {}
+[19.405062] (-) TimerEvent: {}
+[19.505824] (-) TimerEvent: {}
+[19.606716] (-) TimerEvent: {}
+[19.707611] (-) TimerEvent: {}
+[19.808564] (-) TimerEvent: {}
+[19.909396] (-) TimerEvent: {}
+[20.010241] (-) TimerEvent: {}
+[20.111095] (-) TimerEvent: {}
+[20.211956] (-) TimerEvent: {}
+[20.312818] (-) TimerEvent: {}
+[20.413668] (-) TimerEvent: {}
+[20.514542] (-) TimerEvent: {}
+[20.615252] (-) TimerEvent: {}
+[20.716261] (-) TimerEvent: {}
+[20.817478] (-) TimerEvent: {}
+[20.918321] (-) TimerEvent: {}
+[21.019198] (-) TimerEvent: {}
+[21.119992] (-) TimerEvent: {}
+[21.220776] (-) TimerEvent: {}
+[21.321563] (-) TimerEvent: {}
+[21.422348] (-) TimerEvent: {}
+[21.523143] (-) TimerEvent: {}
+[21.624045] (-) TimerEvent: {}
+[21.724935] (-) TimerEvent: {}
+[21.825818] (-) TimerEvent: {}
+[21.926684] (-) TimerEvent: {}
+[22.027564] (-) TimerEvent: {}
+[22.128427] (-) TimerEvent: {}
+[22.229289] (-) TimerEvent: {}
+[22.330087] (-) TimerEvent: {}
+[22.430552] (-) TimerEvent: {}
+[22.531103] (-) TimerEvent: {}
+[22.632006] (-) TimerEvent: {}
+[22.732957] (-) TimerEvent: {}
+[22.833775] (-) TimerEvent: {}
+[22.934566] (-) TimerEvent: {}
+[23.035091] (-) TimerEvent: {}
+[23.136033] (-) TimerEvent: {}
+[23.236973] (-) TimerEvent: {}
+[23.337701] (-) TimerEvent: {}
+[23.438122] (-) TimerEvent: {}
+[23.538774] (-) TimerEvent: {}
+[23.639217] (-) TimerEvent: {}
+[23.739694] (-) TimerEvent: {}
+[23.840312] (-) TimerEvent: {}
+[23.940906] (-) TimerEvent: {}
+[24.041627] (-) TimerEvent: {}
+[24.142774] (-) TimerEvent: {}
+[24.243825] (-) TimerEvent: {}
+[24.344902] (-) TimerEvent: {}
+[24.445955] (-) TimerEvent: {}
+[24.547003] (-) TimerEvent: {}
+[24.648047] (-) TimerEvent: {}
+[24.749076] (-) TimerEvent: {}
+[24.850186] (-) TimerEvent: {}
+[24.951333] (-) TimerEvent: {}
+[25.052357] (-) TimerEvent: {}
+[25.153168] (-) TimerEvent: {}
+[25.253959] (-) TimerEvent: {}
+[25.354749] (-) TimerEvent: {}
+[25.455629] (-) TimerEvent: {}
+[25.556479] (-) TimerEvent: {}
+[25.657261] (-) TimerEvent: {}
+[25.758071] (-) TimerEvent: {}
+[25.858911] (-) TimerEvent: {}
+[25.960047] (-) TimerEvent: {}
+[26.060886] (-) TimerEvent: {}
+[26.161277] (-) TimerEvent: {}
+[26.261641] (-) TimerEvent: {}
+[26.362090] (-) TimerEvent: {}
+[26.462675] (-) TimerEvent: {}
+[26.563262] (-) TimerEvent: {}
+[26.663947] (-) TimerEvent: {}
+[26.764539] (-) TimerEvent: {}
+[26.865162] (-) TimerEvent: {}
+[26.965744] (-) TimerEvent: {}
+[27.066343] (-) TimerEvent: {}
+[27.166935] (-) TimerEvent: {}
+[27.267576] (-) TimerEvent: {}
+[27.368200] (-) TimerEvent: {}
+[27.468922] (-) TimerEvent: {}
+[27.570050] (-) TimerEvent: {}
+[27.671135] (-) TimerEvent: {}
+[27.772195] (-) TimerEvent: {}
+[27.873283] (-) TimerEvent: {}
+[27.974384] (-) TimerEvent: {}
+[28.075428] (-) TimerEvent: {}
+[28.176322] (-) TimerEvent: {}
+[28.276890] (-) TimerEvent: {}
+[28.377477] (-) TimerEvent: {}
+[28.478238] (-) TimerEvent: {}
+[28.579400] (-) TimerEvent: {}
+[28.680509] (-) TimerEvent: {}
+[28.781496] (-) TimerEvent: {}
+[28.882083] (-) TimerEvent: {}
+[28.982662] (-) TimerEvent: {}
+[29.083276] (-) TimerEvent: {}
+[29.183876] (-) TimerEvent: {}
+[29.284509] (-) TimerEvent: {}
+[29.385121] (-) TimerEvent: {}
+[29.485847] (-) TimerEvent: {}
+[29.586965] (-) TimerEvent: {}
+[29.688133] (-) TimerEvent: {}
+[29.789274] (-) TimerEvent: {}
+[29.890421] (-) TimerEvent: {}
+[29.991544] (-) TimerEvent: {}
+[30.092688] (-) TimerEvent: {}
+[30.193845] (-) TimerEvent: {}
+[30.295008] (-) TimerEvent: {}
+[30.402234] (-) TimerEvent: {}
+[30.504157] (-) TimerEvent: {}
+[30.605342] (-) TimerEvent: {}
+[30.706444] (-) TimerEvent: {}
+[30.807510] (-) TimerEvent: {}
+[30.908463] (-) TimerEvent: {}
+[31.009053] (-) TimerEvent: {}
+[31.109689] (-) TimerEvent: {}
+[31.210320] (-) TimerEvent: {}
+[31.311015] (-) TimerEvent: {}
+[31.412131] (-) TimerEvent: {}
+[31.513656] (-) TimerEvent: {}
+[31.614739] (-) TimerEvent: {}
+[31.715796] (-) TimerEvent: {}
+[31.816931] (-) TimerEvent: {}
+[31.918054] (-) TimerEvent: {}
+[32.019152] (-) TimerEvent: {}
+[32.120317] (-) TimerEvent: {}
+[32.221365] (-) TimerEvent: {}
+[32.322368] (-) TimerEvent: {}
+[32.423413] (-) TimerEvent: {}
+[32.524464] (-) TimerEvent: {}
+[32.625577] (-) TimerEvent: {}
+[32.726826] (-) TimerEvent: {}
+[32.827933] (-) TimerEvent: {}
+[32.929019] (-) TimerEvent: {}
+[33.030085] (-) TimerEvent: {}
+[33.131161] (-) TimerEvent: {}
+[33.232206] (-) TimerEvent: {}
+[33.333285] (-) TimerEvent: {}
+[33.434381] (-) TimerEvent: {}
+[33.535445] (-) TimerEvent: {}
+[33.636540] (-) TimerEvent: {}
+[33.737862] (-) TimerEvent: {}
+[33.839374] (-) TimerEvent: {}
+[33.940439] (-) TimerEvent: {}
+[34.041002] (-) TimerEvent: {}
+[34.141538] (-) TimerEvent: {}
+[34.242729] (-) TimerEvent: {}
+[34.343818] (-) TimerEvent: {}
+[34.445000] (-) TimerEvent: {}
+[34.546183] (-) TimerEvent: {}
+[34.647410] (-) TimerEvent: {}
+[34.748457] (-) TimerEvent: {}
+[34.849525] (-) TimerEvent: {}
+[34.950584] (-) TimerEvent: {}
+[35.051616] (-) TimerEvent: {}
+[35.152629] (-) TimerEvent: {}
+[35.253644] (-) TimerEvent: {}
+[35.354651] (-) TimerEvent: {}
+[35.455625] (-) TimerEvent: {}
+[35.556731] (-) TimerEvent: {}
+[35.657649] (-) TimerEvent: {}
+[35.758211] (-) TimerEvent: {}
+[35.858758] (-) TimerEvent: {}
+[35.959303] (-) TimerEvent: {}
+[36.059860] (-) TimerEvent: {}
+[36.160441] (-) TimerEvent: {}
+[36.260968] (-) TimerEvent: {}
+[36.361506] (-) TimerEvent: {}
+[36.462038] (-) TimerEvent: {}
+[36.562586] (-) TimerEvent: {}
+[36.663184] (-) TimerEvent: {}
+[36.763761] (-) TimerEvent: {}
+[36.864307] (-) TimerEvent: {}
+[36.964629] (-) TimerEvent: {}
+[37.065145] (-) TimerEvent: {}
+[37.165811] (-) TimerEvent: {}
+[37.266832] (-) TimerEvent: {}
+[37.367843] (-) TimerEvent: {}
+[37.468836] (-) TimerEvent: {}
+[37.569820] (-) TimerEvent: {}
+[37.670803] (-) TimerEvent: {}
+[37.771918] (-) TimerEvent: {}
+[37.872925] (-) TimerEvent: {}
+[37.973940] (-) TimerEvent: {}
+[38.075007] (-) TimerEvent: {}
+[38.176298] (-) TimerEvent: {}
+[38.276889] (-) TimerEvent: {}
+[38.377487] (-) TimerEvent: {}
+[38.478078] (-) TimerEvent: {}
+[38.578845] (-) TimerEvent: {}
+[38.679863] (-) TimerEvent: {}
+[38.780407] (-) TimerEvent: {}
+[38.880954] (-) TimerEvent: {}
+[38.981481] (-) TimerEvent: {}
+[39.081997] (-) TimerEvent: {}
+[39.182492] (-) TimerEvent: {}
+[39.282995] (-) TimerEvent: {}
+[39.383516] (-) TimerEvent: {}
+[39.484042] (-) TimerEvent: {}
+[39.584596] (-) TimerEvent: {}
+[39.685069] (-) TimerEvent: {}
+[39.785594] (-) TimerEvent: {}
+[39.886131] (-) TimerEvent: {}
+[39.986661] (-) TimerEvent: {}
+[40.087187] (-) TimerEvent: {}
+[40.187720] (-) TimerEvent: {}
+[40.288251] (-) TimerEvent: {}
+[40.388785] (-) TimerEvent: {}
+[40.489329] (-) TimerEvent: {}
+[40.589996] (-) TimerEvent: {}
+[40.691005] (-) TimerEvent: {}
+[40.792208] (-) TimerEvent: {}
+[40.893318] (-) TimerEvent: {}
+[40.994370] (-) TimerEvent: {}
+[41.095365] (-) TimerEvent: {}
+[41.196341] (-) TimerEvent: {}
+[41.297302] (-) TimerEvent: {}
+[41.398291] (-) TimerEvent: {}
+[41.499281] (-) TimerEvent: {}
+[41.600222] (-) TimerEvent: {}
+[41.701197] (-) TimerEvent: {}
+[41.802274] (-) TimerEvent: {}
+[41.903311] (-) TimerEvent: {}
+[42.004423] (-) TimerEvent: {}
+[42.105390] (-) TimerEvent: {}
+[42.206269] (-) TimerEvent: {}
+[42.306821] (-) TimerEvent: {}
+[42.407368] (-) TimerEvent: {}
+[42.507935] (-) TimerEvent: {}
+[42.608479] (-) TimerEvent: {}
+[42.709019] (-) TimerEvent: {}
+[42.809549] (-) TimerEvent: {}
+[42.910081] (-) TimerEvent: {}
+[43.010619] (-) TimerEvent: {}
+[43.111176] (-) TimerEvent: {}
+[43.211722] (-) TimerEvent: {}
+[43.312249] (-) TimerEvent: {}
+[43.412764] (-) TimerEvent: {}
+[43.513279] (-) TimerEvent: {}
+[43.613799] (-) TimerEvent: {}
+[43.714332] (-) TimerEvent: {}
+[43.814847] (-) TimerEvent: {}
+[43.915373] (-) TimerEvent: {}
+[44.016009] (-) TimerEvent: {}
+[44.116973] (-) TimerEvent: {}
+[44.217991] (-) TimerEvent: {}
+[44.318957] (-) TimerEvent: {}
+[44.419795] (-) TimerEvent: {}
+[44.520302] (-) TimerEvent: {}
+[44.620818] (-) TimerEvent: {}
+[44.721357] (-) TimerEvent: {}
+[44.822050] (-) TimerEvent: {}
+[44.923004] (-) TimerEvent: {}
+[45.023968] (-) TimerEvent: {}
+[45.124920] (-) TimerEvent: {}
+[45.225850] (-) TimerEvent: {}
+[45.326783] (-) TimerEvent: {}
+[45.427804] (-) TimerEvent: {}
+[45.528835] (-) TimerEvent: {}
+[45.629785] (-) TimerEvent: {}
+[45.730779] (-) TimerEvent: {}
+[45.831946] (-) TimerEvent: {}
+[45.932943] (-) TimerEvent: {}
+[46.033283] (-) TimerEvent: {}
+[46.133764] (-) TimerEvent: {}
+[46.234572] (-) TimerEvent: {}
+[46.335311] (-) TimerEvent: {}
+[46.427577] (lslidar_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable lslidar_driver_node\x1b[0m\n'}
+[46.435450] (-) TimerEvent: {}
+[46.536196] (-) TimerEvent: {}
+[46.637133] (-) TimerEvent: {}
+[46.737759] (-) TimerEvent: {}
+[46.838202] (-) TimerEvent: {}
+[46.938586] (-) TimerEvent: {}
+[47.038950] (-) TimerEvent: {}
+[47.139332] (-) TimerEvent: {}
+[47.239731] (-) TimerEvent: {}
+[47.340249] (-) TimerEvent: {}
+[47.441112] (-) TimerEvent: {}
+[47.541901] (-) TimerEvent: {}
+[47.642650] (-) TimerEvent: {}
+[47.743363] (-) TimerEvent: {}
+[47.844191] (-) TimerEvent: {}
+[47.944926] (-) TimerEvent: {}
+[48.045340] (-) TimerEvent: {}
+[48.145743] (-) TimerEvent: {}
+[48.246129] (-) TimerEvent: {}
+[48.346523] (-) TimerEvent: {}
+[48.446930] (-) TimerEvent: {}
+[48.547318] (-) TimerEvent: {}
+[48.647698] (-) TimerEvent: {}
+[48.748085] (-) TimerEvent: {}
+[48.848474] (-) TimerEvent: {}
+[48.948980] (-) TimerEvent: {}
+[49.049838] (-) TimerEvent: {}
+[49.150595] (-) TimerEvent: {}
+[49.251183] (-) TimerEvent: {}
+[49.351774] (-) TimerEvent: {}
+[49.452353] (-) TimerEvent: {}
+[49.552735] (-) TimerEvent: {}
+[49.653202] (-) TimerEvent: {}
+[49.753746] (-) TimerEvent: {}
+[49.854760] (-) TimerEvent: {}
+[49.955504] (-) TimerEvent: {}
+[50.056374] (-) TimerEvent: {}
+[50.157560] (-) TimerEvent: {}
+[50.258599] (-) TimerEvent: {}
+[50.359531] (-) TimerEvent: {}
+[50.460640] (-) TimerEvent: {}
+[50.561599] (-) TimerEvent: {}
+[50.662507] (-) TimerEvent: {}
+[50.753217] (lslidar_driver) StdoutLine: {'line': b'[100%] Built target lslidar_driver_node\n'}
+[50.762746] (-) TimerEvent: {}
+[50.781605] (lslidar_driver) CommandEnded: {'returncode': 0}
+[50.786192] (lslidar_driver) JobProgress: {'identifier': 'lslidar_driver', 'progress': 'install'}
+[50.790012] (lslidar_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/elf/elf_slam_ws/build/lslidar_driver'], 'cwd': '/home/elf/elf_slam_ws/build/lslidar_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en'), ('USER', 'elf'), ('SSH_CLIENT', '192.168.72.118 61810 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/elf'), ('MUTTER_DEBUG_ENABLE_ATOMIC_KMS', '0'), ('OLDPWD', '/home/elf/elf_slam_ws'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'en_US.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/elf/elf_slam_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'elf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-color'), ('XDG_SESSION_ID', 'c10'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/elf/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'letter'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('CLUTTER_PAINT', 'disable-dynamic-max-render-time'), ('PROMPT_COMMAND', 'history -a;pwd > /tmp/5255c8ce4e;'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('MUTTER_DEBUG_FORCE_KMS_MODE', 'simple'), ('PWD', '/home/elf/elf_slam_ws/build/lslidar_driver'), ('SSH_CONNECTION', '192.168.72.118 61810 192.168.72.163 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/elf/elf_slam_ws/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/elf/elf_slam_ws/install/imu_ros2_device/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/elf_slam/lib/python3.10/site-packages:/home/elf/elf_slam_ws/install/YbImuLib/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('TZ', 'Asia/Shanghai'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/elf/elf_slam_ws/install/lslidar_msgs:/home/elf/elf_slam_ws/install/lslidar_driver:/home/elf/elf_slam_ws/install/imu_ros2_device:/home/elf/elf_slam_ws/install/elf_slam:/opt/ros/humble')]), 'shell': False}
+[50.812640] (lslidar_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[50.814636] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/launch\n'}
+[50.816985] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/launch/lsn10_launch.py\n'}
+[50.817431] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/params\n'}
+[50.817786] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/params/lidar_uart_ros2\n'}
+[50.818106] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/params/lidar_uart_ros2/lsn10.yaml\n'}
+[50.818422] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/rviz\n'}
+[50.818735] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/rviz/lslidar.rviz\n'}
+[50.819047] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/lib/lslidar_driver/lslidar_driver_node\n'}
+[50.824995] (lslidar_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/elf/elf_slam_ws/install/lslidar_driver/lib/lslidar_driver/lslidar_driver_node" to ""\n'}
+[50.826000] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/ament_index/resource_index/package_run_dependencies/lslidar_driver\n'}
+[50.826494] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/ament_index/resource_index/parent_prefix_path/lslidar_driver\n'}
+[50.828825] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/environment/ament_prefix_path.sh\n'}
+[50.829260] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/environment/ament_prefix_path.dsv\n'}
+[50.829711] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/environment/path.sh\n'}
+[50.830166] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/environment/path.dsv\n'}
+[50.830684] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/local_setup.bash\n'}
+[50.831098] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/local_setup.sh\n'}
+[50.831484] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/local_setup.zsh\n'}
+[50.831834] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/local_setup.dsv\n'}
+[50.832221] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.dsv\n'}
+[50.832677] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/ament_index/resource_index/packages/lslidar_driver\n'}
+[50.833063] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[50.833377] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[50.833691] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/cmake/lslidar_driverConfig.cmake\n'}
+[50.834004] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/cmake/lslidar_driverConfig-version.cmake\n'}
+[50.834330] (lslidar_driver) StdoutLine: {'line': b'-- Installing: /home/elf/elf_slam_ws/install/lslidar_driver/share/lslidar_driver/package.xml\n'}
+[50.837339] (lslidar_driver) CommandEnded: {'returncode': 0}
+[50.862944] (-) TimerEvent: {}
+[50.896875] (lslidar_driver) JobEnded: {'identifier': 'lslidar_driver', 'rc': 0}
+[50.898920] (-) EventReactorShutdown: {}
