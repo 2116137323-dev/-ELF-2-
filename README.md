@@ -12,9 +12,12 @@
    - 检测到目标后生成报警事件、上传 Android 端，并在 ROS2 中发布定位标注。
    - 识别结果可通过 Web 页面实时预览。
 
----
-![Uploading image.png…]()
 
+
+
+---
+**整体功能图**
+   - <img width="396" height="265" alt="image" src="https://github.com/user-attachments/assets/87c039dd-ac22-4ba5-b54d-a977b2e29338" />
 
 ## 二、项目目录结构
 
