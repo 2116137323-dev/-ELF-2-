@@ -48,7 +48,6 @@
 
 elf_slam_ws/
 ├── dual_detect_service.py              # 视觉识别 + 报警 + 急停联动
-├── 技术文档.md                          # 本文档
 └── src/
     ├── elf_slam/                       # 主包：SLAM + Nav2 + 底盘
     │   ├── launch/
