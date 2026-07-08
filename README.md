@@ -461,7 +461,7 @@ ROS2/RViz 标注桥接模块。
 
 ---
 
-## 九、适合写进答辩或说明书的项目亮点
+## 九、项目亮点
 
 - 双路视觉融合识别：可见光 + 热成像联动；
 - 报警后自动联动摄像头语音提示；
@@ -472,14 +472,468 @@ ROS2/RViz 标注桥接模块。
 
 ---
 
-## 十、补充说明
+## 十、附：旧版详细技术文档
 
-当前 README 侧重项目总体技术文档和目录说明，适合作为答辩、验收和二次开发说明基础文档。
+下面内容来自你原来的 `技术文档.md`，我已经合并进来，保留其更偏底层和更完整的说明，便于答辩和验收时直接使用。
 
-如果你愿意，我下一步可以继续帮你补：
+# ELF 救援机器人系统技术文档
 
-- `README.md` 的“安装部署说明”
-- “运行步骤”
-- “接口说明表格”
-- “硬件接线说明”
-- “答辩用项目简介版”
+> 基于 RK3588 + ROS2 Humble 的「边导航边建图边避障」自主移动机器人，集成双路（可见光 + 热成像）人员识别、报警联动停车与地图定位上报。
+
+---
+
+## 1. 系统概述
+
+本系统面向搜救场景，机器人在未知环境中**边走边建图**，同时根据实时地图进行**自主导航与动态避障**；视觉子系统并行识别被困/被埋人员，触发报警后在地图上标注位置，并**立即停止导航与底盘运动**。
+
+整机分为两个相对独立的子系统，通过 ROS2 话题/TF 协作：
+
+| 子系统 | 入口 | 作用 |
+|--------|------|------|
+| 导航建图（ROS2 包 `elf_slam`） | `online_async_nav_launch.py` | SLAM + Nav2 + 底盘驱动 + RViz |
+| 视觉识别（独立 Python 服务） | `dual_detect_service.py` | 双路 RKNN 推理 + 报警上报 + 地图标注 + 急停联动 |
+
+---
+
+## 2. 技术栈
+
+### 2.1 硬件平台
+
+| 部件 | 型号/接口 | 用途 |
+|------|-----------|------|
+| 主控 | RK3588（3 核 NPU） | ROS2 主控 + 视觉推理 |
+| 激光雷达 | 镭神 N10，串口 `/dev/wheeltec_laser` | 建图、避障 |
+| IMU | YbIMU，串口 `/dev/ttyUSB0` | 航向角 |
+| 编码器 | 双轮 GPIO 四相计数 | 里程计位移 |
+| 底盘电机 | H 桥 + PWM，内核字符设备 `/dev/my_serial` | 差速驱动 |
+| 可见光相机 | RTSP 网络流 | 目标检测 |
+| 热成像 | 32×24 测温阵列，串口 `/dev/ttyDevice2` | 体温/热源检测 |
+
+**车体尺寸**：长 37 cm × 宽 28 cm（用于 Nav2 代价地图矩形 footprint）。
+
+### 2.2 软件与框架
+
+| 层次 | 技术 | 在本项目中的用途 |
+|------|------|------------------|
+| 操作系统 | Ubuntu 22.04 | 机器人运行环境 |
+| 中间件 | **ROS2 Humble** | 节点通信、TF、Launch 编排 |
+| 建图 | **slam_toolbox**（async 模式） | 在线 SLAM，发布 `/map` 与 `map→odom` |
+| 导航 | **Nav2**（nav2_bringup） | 全局规划、局部避障、行为树导航 |
+| 局部规划器 | **DWB**（Dynamic Window Approach） | 生成 `/local_plan`，输出 `/cmd_vel` |
+| 速度平滑 | **velocity_smoother** | 加速度限制，平滑速度指令 |
+| 传感器驱动 | lslidar_driver、imu_ros2_device、imu_filter_madgwick | 雷达、IMU 采集与滤波 |
+| 可视化 | **RViz2** + nav2_rviz_plugins | 地图、路径、代价地图、识别点 |
+| 视觉推理 | **RKNN Lite**（YOLOv8）、OpenCV | NPU 双路并行目标检测 |
+| Web 服务 | **Flask** | MJPEG 推流、安卓端 HTTP 接口 |
+| 底层 IO | C 程序（encoder_raw）、Linux 内核模块 | GPIO 编码器读取、电机 PWM 控制 |
+| 构建 | **colcon** + ament_python | ROS2 包编译与安装 |
+
+### 2.3 核心设计模式
+
+- **在线 SLAM + 导航**：不依赖预存地图，`allow_unknown: true` 允许在未知区域规划。
+- **开环差速底盘**：`/cmd_vel` 连续速度 → 离散方向/占空比命令，硬件不支持弧线转弯。
+- **子系统解耦**：视觉服务通过 TF 查询位姿，不直接依赖导航节点。
+- **报警三级停车**：急停话题直达硬件 → 取消 Nav2 目标 → 持续发零速，避免惯性前冲。
+
+---
+
+## 3. 系统架构与数据流
+
+### 3.1 TF 坐标树
+
+```text
+map ──(slam_toolbox)──► odom ──(encoder_bridge)──► base_footprint
+                                                      ├── base_link  (URDF)
+                                                      ├── laser      (静态 TF, z=0.1m)
+                                                      └── imu_link   (静态 TF, z=0.05m)
+```
+
+- `map → odom`：slam_toolbox 发布，校正里程计累积误差。
+- `odom → base_footprint`：encoder_bridge 发布，编码器位移 + IMU 航向积分。
+- 其余由 `robot_state_publisher` 与 `static_transform_publisher` 维护。
+
+### 3.2 关键话题
+
+| 话题 | 类型 | 发布者 | 订阅者/用途 |
+|------|------|--------|-------------|
+| `/scan` | LaserScan | lslidar_driver | scan_stamp_fix |
+| `/scan_fixed` | LaserScan | scan_stamp_fix | slam_toolbox、双 costmap |
+| `/imu/data` | Imu | imu_filter_madgwick | encoder_bridge |
+| `/odom` | Odometry | encoder_bridge | slam_toolbox、Nav2 |
+| `/map` | OccupancyGrid | slam_toolbox | global_costmap、RViz |
+| `/plan` | Path | planner_server | RViz（绿色全局路径） |
+| `/local_plan` | Path | controller_server(DWB) | RViz（红色局部路径） |
+| `/cmd_vel` | Twist | velocity_smoother | diff_drive_controller |
+| `/emergency_stop` | Bool | dual_detect_service | diff_drive_controller（急停） |
+| `/dual_detect_markers` | MarkerArray | dual_detect_service | RViz（识别定位点） |
+| `/visualization_marker` | Marker | dual_detect_service | RViz（单次识别标记） |
+
+### 3.3 端到端数据流
+
+```mermaid
+flowchart TB
+    subgraph 传感器
+        Lidar["lslidar_driver\n/scan"]
+        Fix["scan_stamp_fix\n/scan_fixed"]
+        IMU["imu_filter_madgwick\n/imu/data"]
+        Enc["encoder_bridge\n/odom + TF"]
+    end
+    subgraph 建图
+        SLAM["slam_toolbox\n/map + map→odom"]
+    end
+    subgraph 导航避障
+        GC["global_costmap"]
+        LC["local_costmap"]
+        Plan["planner_server\n/plan"]
+        DWB["controller_server(DWB)\n/local_plan + /cmd_vel"]
+        VS["velocity_smoother"]
+    end
+    subgraph 底盘
+        DD["diff_drive_controller"]
+        Motor["内核模块 /dev/my_serial"]
+    end
+    subgraph 视觉识别
+        DET["dual_detect_service\nRKNN 双路推理"]
+        ESTOP["/emergency_stop"]
+    end
+
+    Lidar --> Fix --> SLAM
+    Fix --> GC
+    Fix --> LC
+    Enc --> SLAM
+    IMU --> Enc
+    SLAM --> GC
+    GC --> Plan --> DWB
+    LC --> DWB --> VS --> DD --> Motor
+    DET --> ESTOP --> DD
+    DET -.查询 TF.-> SLAM
+```
+
+---
+
+## 4. 核心模块实现
+
+### 4.1 `scan_stamp_fix`（雷达预处理）
+
+**文件**：`src/elf_slam/elf_slam/scan_stamp_fix.py`
+
+**解决的问题**：
+1. 雷达帧时间戳过旧/为零/超前 → TF 外推失败。
+2. N10 每帧波束数不固定 → slam_toolbox 拒绝扫描。
+3. float32 精度导致 `angle_max/angle_increment` 不自洽 → karto 反算期望波束数错误（如 `expected 449`）。
+
+**实现方式**：
+- 订阅 `/scan`，校正 `header.stamp` 后发布 `/scan_fixed`。
+- 线性插值重采样到固定 `target_beams=451`。
+- **重算 `angle_max = angle_min + angle_increment × (beams-1)`**，保证三个角度参数在 float32 下严格自洽。
+
+### 4.2 `encoder_bridge`（里程计）
+
+**文件**：`src/elf_slam/elf_slam/encoder_bridge.py`  
+**底层**：`src/elf_slam/src/encoder_raw.c`（GPIO 四相编码器）
+
+**实现方式**：
+1. 后台线程持续运行 `encoder_raw`，读取 `左轮,右轮` 脉冲计数。
+2. 脉冲转距离：`m_per_tick = π × wheel_diameter / pulses_per_rev`（默认轮径 0.153m，820 脉冲/圈）。
+3. 订阅 `/imu/data` 获取航向角 `yaw`。
+4. 30 Hz 定时器：根据左右轮增量 + yaw 积分 `x/y`，发布 `/odom` 和 `odom→base_footprint` TF。
+5. 编码器长时间无变化输出告警（车未动或 GPIO 异常）。
+
+### 4.3 `diff_drive_controller`（底盘驱动）
+
+**文件**：`src/elf_slam/elf_slam/diff_drive_controller.py`
+
+**作用**：将 Nav2 输出的连续 `/cmd_vel` 映射为内核电机模块支持的**离散命令**。
+
+**内核接口**（`/dev/my_serial`）：
+
+| 写入 | 含义 |
+|------|------|
+| `w` / `s` | 前进 / 后退 |
+| `a` / `d` | 原地左转 / 右转 |
+| `p` | 停止 |
+| 数字 `X` | PWM 占空比 = `abs(X-100)%`（如 60% 写 `40`） |
+
+**三个硬件适配**：
+
+1. **反向占空比映射**：目标占空比 D% → 写入 `100-D`。
+2. **写入间隔 > 100ms**：内核每 100ms 轮询并清空缓冲，控制频率限制 ≤ 8 Hz，每周期最多写一条命令。
+3. **按变化下发 + 停车静默**：仅在方向/占空比变化时写入；停车补发 `stop_repeat` 次 `p` 后静默，避免与手机 APP 抢占串口。
+
+**运动决策**（`_resolve_target`）：
+
+```text
+nv = |v|/max_v,  nw = |w|/max_w
+若均低于死区 → 停止
+若 nw ≥ nv × turn_bias → 原地转弯（固定 turn_duty=80%）
+否则 → 直行（占空比在 min_duty~max_duty 间线性映射，60%~90%）
+```
+
+**急停通道**（`/emergency_stop`）：
+
+- 订阅 `std_msgs/Bool`，收到 `True` 时在回调中**立即**写 `p` 停车，清空残留 cmd_vel，锁存急停状态。
+- 急停期间控制循环强制停车，忽略所有 `/cmd_vel`。
+- 收到 `False` 解除锁定，恢复正常控制。
+
+### 4.4 Nav2 导航与避障
+
+**配置**：`src/elf_slam/config/nav2_params_online_slam.yaml`  
+**启动**：`online_async_nav_launch.py` 通过 `nav2_bringup/navigation_launch.py` 拉起全套 Nav2 节点。
+
+**实现链路**：
+
+1. **global_costmap**：订阅 `/map`（slam_toolbox 实时地图）+ `/scan_fixed`（动态障碍），用于全局路径规划。
+2. **local_costmap**：3×3 m 滚动窗口，仅 `/scan_fixed`，用于局部避障。
+3. **planner_server**（Navfn）：在全局代价地图上规划 `/plan`。
+4. **controller_server**（DWB）：在局部代价地图上采样轨迹，输出 `/local_plan` 和 `/cmd_vel`。
+5. **velocity_smoother**：限制加减速，平滑后送给底盘。
+6. **bt_navigator**：行为树管理导航状态（规划、跟随、恢复等）。
+
+**车体轮廓**（矩形 footprint，替代原圆形 `robot_radius`）：
+
+```yaml
+footprint: "[[0.185, 0.14], [0.185, -0.14], [-0.185, -0.14], [-0.185, 0.14]]"
+```
+
+以 `base_footprint` 为中心：前后各 0.185 m（37 cm），左右各 0.14 m（28 cm）。局部/全局 costmap 均使用此轮廓做膨胀避障。
+
+**关键速度参数**：
+
+| 参数 | 值 | 说明 |
+|------|----|------|
+| `max_vel_x` | 0.5 m/s | 最大直行速度 |
+| `max_vel_theta` | 1.5 rad/s | 最大角速度 |
+| `vtheta_samples` | 40 | DWB 转向采样数 |
+| `sim_time` | 1.2 s | 轨迹预测窗口 |
+| `inflation_radius` | 0.35 / 0.45 m | 局部/全局膨胀半径 |
+
+### 4.5 `dual_detect_service.py`（视觉识别与报警联动）
+
+**文件**：工作区根目录 `dual_detect_service.py`（独立 Python 服务，非 colcon 包）
+
+**线程架构**：
+
+| 线程 | 职责 |
+|------|------|
+| 采集线程 | 热成像串口解析（0x5A 帧头 → 24×32 温度矩阵）、可见光 RTSP 拉流 |
+| 推理线程 ×2 | RKNN Lite 绑定 NPU Core 1/2，YOLOv8 双路并行推理 |
+| 逻辑线程 | 状态机 SEARCH → VERIFY → COOLDOWN，融合双路结果触发报警 |
+| ROS2 桥接线程 | `DetectionMarkerBridge` 节点，查询 TF、发布 Marker、联动停车 |
+| Flask 主线程 | MJPEG 推流、`/ack`、`/detection/start|stop` HTTP 接口 |
+
+**识别 → 地图标注流程**：
+
+1. 逻辑线程调用 `trigger_alarm(status, now)`。
+2. 暂停识别（`detection_enabled=False`），进入 COOLDOWN，等待安卓端 `/ack` 确认。
+3. 调用 `enqueue_detection_marker()` → ROS2 桥接节点：
+   - 查询 `map → base_footprint` TF，获取当前地图坐标。
+   - 发布 `/dual_detect_pose`、`/dual_detect_markers`、`/visualization_marker`。
+4. 并行：保存截图、HTTP 上报安卓端、触发摄像头语音报警。
+
+**报警 → 停车联动**（三级保障）：
+
+```text
+trigger_alarm()
+  ├─ ① 立即发布 /emergency_stop=True
+  │     └─ diff_drive_controller 回调中直接写 'p'，绕过 velocity_smoother 减速斜坡
+  ├─ ② 异步取消 Nav2 导航目标（/navigate_to_pose/_action/cancel_goal）
+  └─ ③ 持续 1s 向 /cmd_vel 发零速（双保险，阻止规划器继续输出）
+```
+
+**解除急停**：安卓端调用 `/detection/start` 重新开始检测时，发布 `/emergency_stop=False`，允许后续重新下发导航目标。
+
+### 4.6 RViz 可视化
+
+**配置**：`src/elf_slam/config/nav2_online_slam.rviz`
+
+已预配置全部显示项，**无需手动添加**：
+
+| 显示项 | 话题 | 说明 |
+|--------|------|------|
+| Map | `/map` | 实时建图 |
+| LaserScan | `/scan_fixed` | 雷达点云 |
+| Global/Local Costmap | `/global_costmap/costmap`、`/local_costmap/costmap` | 代价地图（半透明） |
+| Global Path | `/plan` | 绿色全局路径 |
+| Local Path | `/local_plan` | 红色局部路径 |
+| Goal Pose | `/goal_pose` | 紫色目标箭头 |
+| Detection Markers | `/dual_detect_markers` | 识别定位点集合 |
+| Detection Marker | `/visualization_marker` | 单次识别标记 |
+| RobotModel | `/robot_description` | 车体模型 |
+
+**开机自启动**：`src/elf_slam/scripts/start_rviz.sh`
+
+```bash
+chmod +x ~/elf_slam_ws/src/elf_slam/scripts/start_rviz.sh
+# 配置 ~/.config/autostart/elf-rviz.desktop 指向该脚本
+```
+
+脚本自动加载 ROS 环境、探测 `DISPLAY`、直接读取源目录 rviz 配置（改配置无需重新 colcon build）。
+
+> **注意**：RViz 必须在有图形桌面的终端运行（NoMachine 远程桌面），纯 SSH 终端无 `DISPLAY` 会报 `could not connect to display`。
+
+---
+
+## 5. Launch 编排
+
+### 5.1 `online_async_launch.py`（SLAM 基础栈）
+
+启动顺序：robot_state_publisher → 静态 TF → 雷达驱动 → scan_stamp_fix → IMU 驱动/滤波 → encoder_bridge → slam_toolbox。
+
+### 5.2 `online_async_nav_launch.py`（完整系统）
+
+在 SLAM 基础栈之上追加：
+
+1. Nav2 全套节点（`navigation_launch.py` + `nav2_params_online_slam.yaml`）
+2. `diff_drive_controller`（底盘驱动）
+3. `rviz2`（加载 `nav2_online_slam.rviz`）
+
+**Launch 参数**：
+
+| 参数 | 默认 | 说明 |
+|------|------|------|
+| `use_rviz` | true | 是否启动 RViz |
+| `use_diff_drive` | true | 是否启动底盘驱动 |
+| `enable_motor` | true | 是否真正写 `/dev/my_serial`（调试设 false） |
+
+---
+
+## 6. 编译与运行
+
+### 6.1 编译
+
+```bash
+cd ~/elf_slam_ws
+colcon build --packages-select elf_slam
+source install/setup.bash
+```
+
+建议首次使用 `--symlink-install`，之后改 yaml/launch/rviz 无需重新编译。
+
+### 6.2 启动
+
+```bash
+# 完整系统：建图 + 导航 + 避障 + 底盘 + RViz
+ros2 launch elf_slam online_async_nav_launch.py
+
+# SSH 无界面调试
+ros2 launch elf_slam online_async_nav_launch.py enable_motor:=false use_rviz:=false
+
+# 仅建图（不导航）
+ros2 launch elf_slam online_async_launch.py
+
+# 视觉识别（另开终端）
+python3 ~/elf_slam_ws/dual_detect_service.py
+```
+
+### 6.3 电机内核模块
+
+```bash
+sudo insmod <motor_module>.ko
+sudo mknod /dev/my_serial c <major> 0
+sudo chmod 666 /dev/my_serial
+```
+
+### 6.4 下发导航目标
+
+- **RViz**：工具栏 "Nav2 Goal"，在地图上点击并拖拽朝向。
+- **命令行**：
+```bash
+ros2 topic pub --once /goal_pose geometry_msgs/PoseStamped \
+  "{header: {frame_id: 'map'}, pose: {position: {x: 1.0, y: 0.0}, orientation: {w: 1.0}}}"
+```
+
+### 6.5 保存地图
+
+```bash
+ros2 launch elf_slam save_map_launch.py map_path:=/home/elf/elf_map
+```
+
+---
+
+## 7. 常见问题排查
+
+| 现象 | 原因 | 处理 |
+|------|------|------|
+| `executable 'diff_drive_controller' not found` | install 未同步 | 重新 `colcon build` |
+| `parameter 'height' invalid type` | costmap width/height 为浮点 | 改为整数 |
+| slam 报 `expected 449` 且无 `/map` | 波束角度不自洽 | scan_stamp_fix 已修复 |
+| `rviz2: could not connect to display` | SSH 无图形界面 | 在 NoMachine 桌面终端运行，或 `export DISPLAY=:0` |
+| RViz 只有 Grid/Map，缺路径等 | 未加载 rviz 配置文件 | 用 `-d` 指定配置，或重新 colcon build |
+| 雷达狂刷 `error` | 串口失败（电机干扰/掉电） | 雷达独立供电、检查 USB |
+| `Failed to make progress` | 车未动 / 编码器无计数 | 接通电机、确认 `/odom` 更新 |
+| 看不到红色局部路径 | 被代价地图遮挡 | 已调低透明度；需下发导航目标后才有 |
+| 手机 APP 卡顿 | ROS 与 APP 抢 `/dev/my_serial` | 已改为按变化下发 + 停车静默 |
+| 报警后车辆还往前冲 | velocity_smoother 减速斜坡 | 已加 `/emergency_stop` 直达硬件停车 |
+
+---
+
+## 8. 调参指南
+
+### 8.1 开环底盘（拐弯偏差）
+
+底盘为开环控制，硬件只支持原地转/直行，无法走平滑弧线：
+
+| 想要的效果 | 调整 |
+|-----------|------|
+| 拐弯过冲、左右摆 | 降低 `turn_duty`，或提高 `control_rate_hz`（≤8） |
+| 拐弯不积极、走斜线 | 降低 `turn_bias`（如 0.4） |
+| 走走停停太频繁 | 提高 `turn_bias`（如 0.8） |
+| 整体太慢 | 提高 `min_duty`、Nav2 `max_vel_x` |
+| 低速堵转 | 提高 `min_duty` |
+
+### 8.2 避障与车体尺寸
+
+- footprint 已按 37×28 cm 配置；若 `base_footprint` 不在车体几何中心，调整前后 X 值不对称。
+- 窄道过不去：降低 `inflation_radius`（局部 0.2~0.25 m）。
+
+### 8.3 报警停车响应
+
+- 急停由 `/emergency_stop` 直达硬件，响应约一个内核轮询周期（~100 ms）。
+- 若仍觉得慢：检查 `enable_motor:=true`、内核模块是否正常加载。
+
+---
+
+## 9. 目录结构
+
+```text
+elf_slam_ws/
+├── dual_detect_service.py              # 视觉识别 + 报警 + 急停联动
+├── 技术文档.md                          # 本文档
+└── src/
+    ├── elf_slam/                       # 主包：SLAM + Nav2 + 底盘
+    │   ├── launch/
+    │   │   ├── online_async_launch.py        # SLAM 全栈
+    │   │   ├── online_async_nav_launch.py    # SLAM + Nav2 + 底盘 + RViz
+    │   │   └── save_map_launch.py            # 保存地图
+    │   ├── config/
+    │   │   ├── mapper_params_online_async.yaml   # slam_toolbox
+    │   │   ├── nav2_params_online_slam.yaml      # Nav2 全套参数
+    │   │   ├── diff_drive_params.yaml            # 底盘参数
+    │   │   └── nav2_online_slam.rviz             # RViz 布局
+    │   ├── scripts/start_rviz.sh                 # RViz 开机自启动
+    │   ├── elf_slam/
+    │   │   ├── encoder_bridge.py                 # 里程计
+    │   │   ├── scan_stamp_fix.py                 # 雷达预处理
+    │   │   └── diff_drive_controller.py          # 底盘驱动 + 急停
+    │   ├── src/encoder_raw.c                      # GPIO 编码器
+    │   └── urdf/elf_robot.urdf
+    ├── imu_ros2_device/                # IMU 驱动
+    ├── lslidar_driver/                 # 雷达驱动
+    └── lslidar_msgs/                   # 雷达消息
+```
+
+---
+
+## 10. 技术要点总结
+
+| 能力 | 用什么技术 | 怎么实现 |
+|------|-----------|----------|
+| 边走边建图 | slam_toolbox async | `/scan_fixed` + `/odom` → `/map` + `map→odom` TF |
+| 自主导航 | Nav2 + DWB | global/local costmap → `/plan` + `/local_plan` → `/cmd_vel` |
+| 动态避障 | Nav2 costmap_2d | 雷达实时更新 obstacle_layer，inflation_layer 膨胀 |
+| 里程计 | 编码器 + IMU 融合 | C 程序读 GPIO → Python 积分 → `/odom` TF |
+| 底盘控制 | 内核模块 + Python 桥接 | `/cmd_vel` → 离散 w/s/a/d/p + PWM 占空比 |
+| 视觉识别 | RKNN YOLOv8 双路 | NPU 双核并行，状态机融合可见光/热成像 |
+| 识别定位 | ROS2 TF + Marker | 查 `map→base_footprint`，发布地图坐标点 |
+| 报警停车 | 急停话题 + Nav2 取消 | `/emergency_stop` 直达硬件 + 取消目标 + 零速 |
+| 可视化 | RViz2 预配置 | 地图、路径、代价地图、识别点一键加载 |
